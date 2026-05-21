@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Activités — GSP General Service Petroleum</title>
+  <meta name="description" content="Les cinq branches d'activités du Groupe GSP : Industries Extractives, Hydrocarbures, Santé Numérique (NURA/Fujifilm), Économie Circulaire (CITABEL), Logistique et expansion Kairos West Mining."/>
+  <!-- Détection langue AVANT rendu CSS -->
+  <script>(function(){var s=localStorage.getItem('gsp-lang');document.documentElement.lang=s&&['fr','en'].includes(s)?s:(navigator.language||'').toLowerCase().startsWith('en')?'en':'fr';})()</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400;1,700&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: { navy:'#111111','dark-navy':'#0A0A0A', gold:'#FF6B00','light-gold':'#FFD4A8', muted:'#6B6B6B' },
+        fontFamily: { serif:['"Playfair Display"','serif'], sans:['Inter','sans-serif'] }
+      }}
+    }
+  </script>
+  <link rel="stylesheet" href="css/custom.css"/>
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png"/>
+  <link rel="icon" type="image/png" sizes="192x192" href="images/favicons/favicon-192x192.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png"/>
+  <meta name="theme-color" content="#0A0A0A"/>
+</head>
+<body class="bg-white text-[#3A3A3A] font-sans">
+
+<div id="menu-overlay" class="mobile-menu-overlay"></div>
+<nav id="mobile-menu" class="mobile-menu">
+  <div class="flex justify-between items-center mb-8">
+    <span class="text-white font-bold text-sm tracking-widest uppercase">Menu</span>
+    <button id="menu-close" class="text-white p-1" aria-label="Fermer">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <a href="index.html" class="nav-link" data-i18n="nav.home">Accueil</a>
+  <a href="activites.html" class="nav-link active" data-i18n="nav.activities">Activités</a>
+  <a href="partenariats.html" class="nav-link" data-i18n="nav.partners">Partenariats</a>
+  <a href="equipe.html" class="nav-link" data-i18n="nav.team">Équipe</a>
+  <a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a>
+  <a href="contact.html" class="mt-6 block text-center font-semibold text-sm px-5 py-2.5 rounded" style="color:white;background:#FF6B00" data-i18n="nav.cta">Nous contacter</a>
+</nav>
+
+<header id="site-header" class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100 transition-shadow duration-300">
+  <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+    <a href="index.html" class="flex items-center" style="text-decoration:none">
+      <picture>
+        <source srcset="images/logo-gsp.webp" type="image/webp">
+        <img src="images/logo-gsp.png" alt="General Service Petroleum"
+             style="height:48px;width:auto;display:block"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      </picture>
+      <!-- Fallback text logo -->
+      <div class="items-center gap-2.5" style="display:none">
+        <div style="width:44px;height:44px;background:#111;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:900;font-style:italic;color:white;font-size:18px;font-family:'Arial Black',Arial,sans-serif;letter-spacing:-1px">GP</div>
+        <div>
+          <div style="font-weight:800;font-size:11px;color:#111;font-family:'Arial Black',Arial,sans-serif;letter-spacing:0.05em;line-height:1.2">GENERAL SERVICE</div>
+          <div style="font-weight:800;font-size:11px;color:#FF6B00;font-family:'Arial Black',Arial,sans-serif;letter-spacing:0.05em;line-height:1.2">PETROLEUM</div>
+        </div>
+      </div>
+    </a>
+    <nav class="desktop-nav flex items-center gap-1">
+      <a href="index.html" class="nav-link px-4 py-2 text-sm font-medium text-[#3A3A3A] hover:text-[#FF6B00] rounded transition-colors" data-i18n="nav.home">Accueil</a>
+      <a href="activites.html" class="nav-link px-4 py-2 text-sm font-medium rounded transition-colors" style="color:#FF6B00;border-bottom:2px solid #FF6B00" data-i18n="nav.activities">Activités</a>
+      <a href="partenariats.html" class="nav-link px-4 py-2 text-sm font-medium text-[#3A3A3A] hover:text-[#FF6B00] rounded transition-colors" data-i18n="nav.partners">Partenariats</a>
+      <a href="equipe.html" class="nav-link px-4 py-2 text-sm font-medium text-[#3A3A3A] hover:text-[#FF6B00] rounded transition-colors" data-i18n="nav.team">Équipe</a>
+      <a href="contact.html" class="nav-link px-4 py-2 text-sm font-medium text-[#3A3A3A] hover:text-[#FF6B00] rounded transition-colors" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <!-- Lang switcher -->
+      <div class="lang-switcher" style="margin-right:0.5rem">
+        <button class="lang-btn" data-lang="fr" aria-label="Français">FR</button>
+        <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+      </div>
+      <a href="contact.html" class="header-cta hidden md:inline-flex text-sm font-semibold px-4 py-2.5 rounded" style="background:#FF6B00;color:white;text-decoration:none" data-i18n="nav.cta">Nous contacter</a>
+      <button id="hamburger" class="hamburger-btn flex flex-col gap-1.5 p-2"><span class="block w-6 h-0.5 bg-[#3A3A3A]"></span><span class="block w-6 h-0.5 bg-[#3A3A3A]"></span><span class="block w-6 h-0.5 bg-[#3A3A3A]"></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- PAGE BANNER -->
+<section class="pt-20 relative overflow-hidden" style="background:#0A0A0A;min-height:220px;display:flex;align-items:flex-end">
+  <div class="absolute inset-0 bg-grid-pattern"></div>
+  <div class="absolute" style="top:-30%;right:-5%;width:400px;height:400px;background:radial-gradient(circle,rgba(255,107,0,0.1) 0%,transparent 70%);border-radius:50%"></div>
+  <div class="relative max-w-6xl mx-auto px-6 pb-10 w-full">
+    <div class="text-xs text-white/40 mb-3 flex items-center gap-2"><a href="index.html" class="hover:text-white transition-colors text-white/40" style="text-decoration:none">Accueil</a> <span>›</span> <span style="color:#FF6B00">Activités</span></div>
+    <h1 class="font-serif font-bold text-white mb-2" style="font-size:clamp(1.8rem,4vw,3rem)" data-i18n="act.page.h1">Nos Activités</h1>
+    <p class="text-sm" style="color:#FF6B00" data-i18n="act.page.sub">Cinq branches d'activités complémentaires au service de l'industrialisation ouest-africaine</p>
+  </div>
+</section>
+
+<!-- STICKY NAV -->
+<div class="activity-nav-sticky">
+  <div class="max-w-6xl mx-auto px-6 overflow-x-auto whitespace-nowrap">
+    <a href="#extractive" class="activity-nav-link" data-i18n="act.nav.extract">Industries Extractives</a>
+    <a href="#hydrocarbures" class="activity-nav-link" data-i18n="act.nav.hydro">Hydrocarbures</a>
+    <a href="#sante" class="activity-nav-link" data-i18n="act.nav.sante">Santé Numérique</a>
+    <a href="#circulaire" class="activity-nav-link" data-i18n="act.nav.circulaire">Économie Circulaire</a>
+    <a href="#logistique" class="activity-nav-link" data-i18n="act.nav.logistique">Logistique</a>
+    <a href="#fiches-techniques" class="activity-nav-link" data-i18n="act.nav.fiches">Fiches Techniques</a>
+  </div>
+</div>
+
+<main>
+
+<!-- SECTION 1 — INDUSTRIES EXTRACTIVES -->
+<section id="extractive" class="activity-section bg-white py-24">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+      <div class="reveal-left">
+        <div class="badge-gsp"><span class="badge-dot"></span><span data-i18n="act.badge1">Extraction</span></div>
+        <h2 class="font-serif font-bold text-3xl mb-3" style="color:#111111" data-i18n="act.a1.h">Industries Extractives</h2>
+        <div class="gold-divider"></div>
+        <p class="text-[#4b5563] leading-relaxed mb-4 lang-fr">
+          Les industries extractives constituent l'activité fondatrice du Groupe GSP. Depuis les sites de Kédougou et Tambacounda, nous extrayons des matériaux industriels — granite, kaolin, argile — destinés aux marchés de la céramique et du ciment.
+        </p>
+        <p class="text-[#4b5563] leading-relaxed mb-4 lang-en">
+          Extractive industries are GSP Group's founding activity. From our sites in Kédougou and Tambacounda, we extract industrial materials — granite, kaolin, clay — serving the ceramics and cement markets.
+        </p>
+        <p class="text-[#4b5563] leading-relaxed mb-6 lang-fr">
+          Ces matériaux alimentent des filières industrielles à fort potentiel, positionnant le Groupe GSP en amont d'une chaîne de valeur en plein essor à l'échelle régionale.
+        </p>
+        <p class="text-[#4b5563] leading-relaxed mb-6 lang-en">
+          These materials supply high-potential industrial sectors, positioning GSP Group upstream of a rapidly growing regional value chain.
+        </p>
+
+        <div class="rounded-lg p-4 mb-3 border-l-4 lang-fr" style="background:#FAFAFA;border-left-color:#FF6B00">
+          <p class="text-sm text-[#3A3A3A] leading-relaxed">
+            <strong class="text-[#111111]" style="color:#111111">Contrat-cadre KEDA Ceramics :</strong> 120 000 tonnes annuelles de granite SF18B signé en mars 2026, avec un acteur coté à la Bourse de Shenzhen.
+          </p>
+        </div>
+        <div class="rounded-lg p-4 mb-3 border-l-4 lang-en" style="background:#FAFAFA;border-left-color:#FF6B00">
+          <p class="text-sm text-[#3A3A3A] leading-relaxed">
+            <strong style="color:#111111">KEDA Ceramics framework agreement:</strong> 120,000 tonnes annually of SF18B granite, signed in March 2026, with a company listed on the Shenzhen Stock Exchange.
+          </p>
+        </div>
+        <div class="rounded-lg p-4 mb-6 border-l-4 lang-fr" style="background:#FAFAFA;border-left-color:#FF6B00">
+          <p class="text-sm text-[#3A3A3A] leading-relaxed">
+            <strong style="color:#111111">Bon de commande CIMAF Sénégal :</strong> 15 000 tonnes de kaolin confirmées avec le groupe Ciments de l'Afrique, opérationnelles sur le marché sénégalais.
+          </p>
+        </div>
+        <div class="rounded-lg p-4 mb-6 border-l-4 lang-en" style="background:#FAFAFA;border-left-color:#FF6B00">
+          <p class="text-sm text-[#3A3A3A] leading-relaxed">
+            <strong style="color:#111111">CIMAF Senegal order:</strong> 15,000 tonnes of kaolin confirmed with the Ciments de l'Afrique group, operational in the Senegalese market.
+          </p>
+        </div>
+
+        <ul class="space-y-1 lang-fr">
+          <li class="feature-li">Granite SF18B (carrière de Saraya, région de Kédougou)</li>
+          <li class="feature-li">Kaolin (gisement de Dialacoto, région de Tambacounda)</li>
+          <li class="feature-li">Argile (zones complémentaires)</li>
+          <li class="feature-li">Capacité d'extraction extensible</li>
+          <li class="feature-li">Logistique d'acheminement vers les industries clientes</li>
+        </ul>
+        <ul class="space-y-1 lang-en">
+          <li class="feature-li">Granite SF18B (Saraya quarry, Kédougou region)</li>
+          <li class="feature-li">Kaolin (Dialacoto deposit, Tambacounda region)</li>
+          <li class="feature-li">Clay (complementary zones)</li>
+          <li class="feature-li">Scalable extraction capacity</li>
+          <li class="feature-li">Logistics for transport to client industries</li>
+        </ul>
+      </div>
+
+      <div class="reveal-right">
+        <div class="rounded-xl overflow-hidden" style="height:480px;position:relative">
+          <picture>
+            <source srcset="images/granite-activity.webp" type="image/webp">
+            <img src="images/granite-activity.jpg" alt="Granite SF18B — Site d'extraction GSP, Saraya, Kédougou"
+                 loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
+          </picture>
+          <!-- Légende discrète en bas -->
+          <div class="absolute bottom-0 left-0 right-0 px-5 py-3" style="background:linear-gradient(transparent,rgba(10,10,10,0.85))">
+            <p class="text-white text-xs font-medium">Granite SF18B — Saraya, Kédougou</p>
+          </div>
+        </div>
+
+        <!-- Photo kaolin en dessous, plus petite -->
+        <div class="rounded-xl overflow-hidden mt-4" style="height:180px;position:relative">
+          <picture>
+            <source srcset="images/kaolin-activity.webp" type="image/webp">
+            <img src="images/kaolin-activity.jpg" alt="Kaolin — Dialacoto, Tambacounda"
+                 loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
+          </picture>
+          <div class="absolute bottom-0 left-0 right-0 px-5 py-3" style="background:linear-gradient(transparent,rgba(10,10,10,0.85))">
+            <p class="text-white text-xs font-medium">Kaolin — Dialacoto, Tambacounda</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════════════════
+     SECTION 1B — FICHES TECHNIQUES MATIÈRES PREMIÈRES
+══════════════════════════════════════════════════════════ -->
+<section id="fiches-techniques" style="background:#0A0A0A;padding:5rem 0">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <!-- Header ─────────────────────────────────────────────── -->
+    <div class="text-center mb-12 reveal">
+      <div class="badge-gsp" style="color:#FFD4A8;border-color:rgba(255,212,168,0.3);background:rgba(255,212,168,0.07);display:inline-flex;margin-bottom:1rem">
+        <span style="background:#FF6B00" class="badge-dot"></span><span data-i18n="act.fiche.badge">Matières Premières</span>
+      </div>
+      <h2 class="font-serif font-bold text-white mb-3" style="font-size:clamp(1.7rem,3vw,2.4rem)" data-i18n="act.fiche.h2">Nos produits extractifs</h2>
+      <p class="text-white/50 max-w-xl mx-auto" style="font-size:0.95rem;line-height:1.7" data-i18n="act.fiche.sub">
+        Deux matériaux haute performance certifiés par des clients industriels de référence — KEDA Ceramics (Chine), Dangote Cement et CIMAF Sénégal.
+      </p>
+    </div>
+
+    <!-- Cards grid ─────────────────────────────────────────── -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+
+      <!-- ── GRANITE SF18B ── -->
+      <div class="reveal" data-delay="0" style="background:#111111;border-radius:12px;border-top:4px solid #FF6B00;overflow:hidden">
+        <!-- Card header -->
+        <div class="px-8 pt-8 pb-5">
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;flex-wrap:wrap">
+            <div>
+              <div style="font-size:0.62rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#FF6B00;margin-bottom:0.35rem">Réf. GSP-GR-SF18B</div>
+              <h3 class="font-serif font-bold text-white" style="font-size:1.35rem;line-height:1.2;margin-bottom:0.2rem">Granite Fondant SF18</h3>
+              <p style="font-size:0.78rem;color:rgba(255,255,255,0.4);font-style:italic">Matière première céramique haute performance</p>
+            </div>
+            <!-- Mineral icon -->
+            <div style="width:48px;height:48px;border-radius:10px;background:rgba(255,107,0,0.12);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FF6B00" stroke-width="1.8"><polygon points="12 2 22 8 22 16 12 22 2 16 2 8 12 2"/><polyline points="12 22 12 16"/><polyline points="22 8 12 16 2 8"/></svg>
+            </div>
+          </div>
+          <!-- Origin tag -->
+          <div style="display:inline-flex;align-items:center;gap:6px;margin-top:1rem;padding:4px 10px;background:rgba(255,107,0,0.1);border-radius:100px;border:1px solid rgba(255,107,0,0.2)">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#FF6B00" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <span style="font-size:0.67rem;font-weight:600;color:#FF6B00;letter-spacing:0.06em">Saraya — Kédougou, Sénégal</span>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div style="height:1px;background:linear-gradient(90deg,rgba(255,107,0,0.4),rgba(255,107,0,0.05) 80%,transparent);margin:0 2rem"></div>
+
+        <!-- Composition table -->
+        <div class="px-8 py-5">
+          <div style="font-size:0.67rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:0.75rem"><span class="lang-fr">Composition Chimique</span><span class="lang-en">Chemical Composition</span></div>
+          <table style="width:100%;border-collapse:collapse;font-size:0.8rem">
+            <thead>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.08)">
+                <th style="text-align:left;padding:6px 0;color:rgba(255,255,255,0.35);font-weight:500;font-size:0.68rem"><span class="lang-fr">Élément</span><span class="lang-en">Element</span></th>
+                <th style="text-align:center;padding:6px 8px;color:rgba(255,255,255,0.35);font-weight:500;font-size:0.68rem"><span class="lang-fr">Teneur typique</span><span class="lang-en">Typical content</span></th>
+                <th style="text-align:right;padding:6px 0;color:rgba(255,255,255,0.35);font-weight:500;font-size:0.68rem"><span class="lang-fr">Spécification</span><span class="lang-en">Specification</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.05)">
+                <td style="padding:8px 0;color:rgba(255,255,255,0.75);font-weight:500"><span class="lang-fr">Oxydes alcalins (K₂O + Na₂O)</span><span class="lang-en">Alkali oxides (K₂O + Na₂O)</span></td>
+                <td style="padding:8px;text-align:center"><span style="color:#FF6B00;font-weight:700;font-size:0.88rem">≥ 8.71%</span></td>
+                <td style="padding:8px 0;text-align:right;color:rgba(255,255,255,0.4);font-size:0.75rem"><span class="lang-fr">Cible céramique premium</span><span class="lang-en">Premium ceramics target</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.05)">
+                <td style="padding:8px 0;color:rgba(255,255,255,0.75);font-weight:500"><span class="lang-fr">Oxyde de fer (Fe₂O₃)</span><span class="lang-en">Iron oxide (Fe₂O₃)</span></td>
+                <td style="padding:8px;text-align:center"><span style="color:#4ade80;font-weight:700;font-size:0.88rem">&lt; 1%</span></td>
+                <td style="padding:8px 0;text-align:right;color:rgba(255,255,255,0.4);font-size:0.75rem"><span class="lang-fr">Compatible pâte blanche</span><span class="lang-en">White body compatible</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.05)">
+                <td style="padding:8px 0;color:rgba(255,255,255,0.75);font-weight:500"><span class="lang-fr">Silice (SiO₂)</span><span class="lang-en">Silica (SiO₂)</span></td>
+                <td style="padding:8px;text-align:center;color:rgba(255,255,255,0.5);font-size:0.8rem"><span class="lang-fr">Conforme à l'usage</span><span class="lang-en">Within specification</span></td>
+                <td style="padding:8px 0;text-align:right;color:rgba(255,255,255,0.4);font-size:0.75rem"><span class="lang-fr">Sur demande</span><span class="lang-en">On request</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.05)">
+                <td style="padding:8px 0;color:rgba(255,255,255,0.75);font-weight:500"><span class="lang-fr">Alumine (Al₂O₃)</span><span class="lang-en">Alumina (Al₂O₃)</span></td>
+                <td style="padding:8px;text-align:center;color:rgba(255,255,255,0.5);font-size:0.8rem"><span class="lang-fr">Conforme à l'usage</span><span class="lang-en">Within specification</span></td>
+                <td style="padding:8px 0;text-align:right;color:rgba(255,255,255,0.4);font-size:0.75rem"><span class="lang-fr">Sur demande</span><span class="lang-en">On request</span></td>
+              </tr>
+              <tr>
+                <td style="padding:8px 0;color:rgba(255,255,255,0.75);font-weight:500"><span class="lang-fr">Perte au feu (PAF)</span><span class="lang-en">Loss on ignition (LOI)</span></td>
+                <td style="padding:8px;text-align:center;color:rgba(255,255,255,0.5);font-size:0.8rem"><span class="lang-fr">Faible</span><span class="lang-en">Low</span></td>
+                <td style="padding:8px 0;text-align:right;color:rgba(255,255,255,0.4);font-size:0.75rem"><span class="lang-fr">Caractérisation disponible</span><span class="lang-en">Characterisation available</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <p style="font-size:0.68rem;color:rgba(255,255,255,0.25);margin-top:0.75rem;font-style:italic"><span class="lang-fr">Données validées par les laboratoires internes de KEDA Ceramics. Certificats ISO 17025 disponibles sur demande.</span><span class="lang-en">Data validated by KEDA Ceramics internal laboratories. ISO 17025 certificates available on request.</span></p>
+        </div>
+
+        <!-- Applications -->
+        <div style="height:1px;background:rgba(255,255,255,0.06);margin:0 2rem"></div>
+        <div class="px-8 py-5">
+          <div style="font-size:0.67rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:0.75rem"><span class="lang-fr">Applications visées</span><span class="lang-en">Target applications</span></div>
+          <ul style="list-style:none;padding:0;margin:0" class="lang-fr">
+            <li style="display:flex;align-items:flex-start;gap:8px;margin-bottom:6px"><span style="width:5px;height:5px;border-radius:50%;background:#FF6B00;margin-top:6px;flex-shrink:0"></span><span style="font-size:0.8rem;color:rgba(255,255,255,0.6)">Grès cérame technique (porcelain stoneware)</span></li>
+            <li style="display:flex;align-items:flex-start;gap:8px;margin-bottom:6px"><span style="width:5px;height:5px;border-radius:50%;background:#FF6B00;margin-top:6px;flex-shrink:0"></span><span style="font-size:0.8rem;color:rgba(255,255,255,0.6)">Carreaux grand format pâte blanche (porosité &lt; 0,5%)</span></li>
+            <li style="display:flex;align-items:flex-start;gap:8px;margin-bottom:6px"><span style="width:5px;height:5px;border-radius:50%;background:#FF6B00;margin-top:6px;flex-shrink:0"></span><span style="font-size:0.8rem;color:rgba(255,255,255,0.6)">Lamine céramique fine (&gt;1 m²) haute pureté</span></li>
+            <li style="display:flex;align-items:flex-start;gap:8px"><span style="width:5px;height:5px;border-radius:50%;background:#FF6B00;margin-top:6px;flex-shrink:0"></span><span style="font-size:0.8rem;color:rgba(255,255,255,0.6)">Émaux et engobes haute exigence technique</span></li>
+          </ul>
+          <ul style="list-style:none;padding:0;margin:0" class="lang-en">
+            <li style="display:flex;align-items:flex-start;gap:8px;margin-bottom:6px"><span style="width:5px;height:5px;border-radius:50%;background:#FF6B00;margin-top:6px;flex-shrink:0"></span><span style="font-size:0.8rem;color:rgba(255,255,255,0.6)">Technical porcelain stoneware</span></li>
+            <li style="display:flex;align-items:flex-start;gap:8px;margin-bottom:6px"><span style="width:5px;height:5px;border-radius:50%;background:#FF6B00;margin-top:6px;flex-shrink:0"></span><span style="font-size:0.8rem;color:rgba(255,255,255,0.6)">Large-format white-body tiles (porosity &lt; 0.5%)</span></li>
+            <li style="display:flex;align-items:flex-start;gap:8px;margin-bottom:6px"><span style="width:5px;height:5px;border-radius:50%;background:#FF6B00;margin-top:6px;flex-shrink:0"></span><span style="font-size:0.8rem;color:rgba(255,255,255,0.6)">Thin ceramic laminate (&gt;1 m²) high purity</span></li>
+            <li style="display:flex;align-items:flex-start;gap:8px"><span style="width:5px;height:5px;border-radius:50%;background:#FF6B00;margin-top:6px;flex-shrink:0"></span><span style="font-size:0.8rem;color:rgba(255,255,255,0.6)">High-specification glazes and engobes</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ── KAOLIN HAUTE ALUMINE ── -->
+      <div class="reveal" data-delay="0.1" style="background:#111111;border-radius:12px;border-top:4px solid #FF6B00;overflow:hidden">
+        <div class="px-8 pt-8 pb-5">
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;flex-wrap:wrap">
+            <div>
+              <div style="font-size:0.62rem;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:#FF6B00;margin-bottom:0.35rem">Réf. GSP-KA-TC01</div>
+              <h3 class="font-serif font-bold text-white" style="font-size:1.35rem;line-height:1.2;margin-bottom:0.2rem">Kaolin Haute Alumine</h3>
+              <p style="font-size:0.78rem;color:rgba(255,255,255,0.4);font-style:italic">Argile kaolinitique haute teneur — Dialacoto</p>
+            </div>
+            <div style="width:48px;height:48px;border-radius:10px;background:rgba(255,107,0,0.12);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FF6B00" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+          </div>
+          <div style="display:inline-flex;align-items:center;gap:6px;margin-top:1rem;padding:4px 10px;background:rgba(255,107,0,0.1);border-radius:100px;border:1px solid rgba(255,107,0,0.2)">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#FF6B00" stroke-width="2.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <span style="font-size:0.67rem;font-weight:600;color:#FF6B00;letter-spacing:0.06em">Dialacoto — Tambacounda, Sénégal</span>
+          </div>
+        </div>
+
+        <div style="height:1px;background:linear-gradient(90deg,rgba(255,107,0,0.4),rgba(255,107,0,0.05) 80%,transparent);margin:0 2rem"></div>
+
+        <div class="px-8 py-5">
+          <div style="font-size:0.67rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:0.75rem"><span class="lang-fr">Composition Chimique</span><span class="lang-en">Chemical Composition</span></div>
+          <table style="width:100%;border-collapse:collapse;font-size:0.8rem">
+            <thead>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.08)">
+                <th style="text-align:left;padding:6px 0;color:rgba(255,255,255,0.35);font-weight:500;font-size:0.68rem"><span class="lang-fr">Élément</span><span class="lang-en">Element</span></th>
+                <th style="text-align:center;padding:6px 8px;color:rgba(255,255,255,0.35);font-weight:500;font-size:0.68rem"><span class="lang-fr">Teneur typique</span><span class="lang-en">Typical content</span></th>
+                <th style="text-align:right;padding:6px 0;color:rgba(255,255,255,0.35);font-weight:500;font-size:0.68rem"><span class="lang-fr">Spécification</span><span class="lang-en">Specification</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.05)">
+                <td style="padding:8px 0;color:rgba(255,255,255,0.75);font-weight:500"><span class="lang-fr">Alumine (Al₂O₃)</span><span class="lang-en">Alumina (Al₂O₃)</span></td>
+                <td style="padding:8px;text-align:center"><span style="color:#FF6B00;font-weight:700;font-size:0.88rem">≥ 38%</span></td>
+                <td style="padding:8px 0;text-align:right;color:rgba(255,255,255,0.4);font-size:0.75rem"><span class="lang-fr">Cible céramique haute exigence</span><span class="lang-en">High-demand ceramics target</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.05)">
+                <td style="padding:8px 0;color:rgba(255,255,255,0.75);font-weight:500"><span class="lang-fr">Silice (SiO₂)</span><span class="lang-en">Silica (SiO₂)</span></td>
+                <td style="padding:8px;text-align:center;color:rgba(255,255,255,0.5);font-size:0.8rem"><span class="lang-fr">Conforme à l'usage</span><span class="lang-en">Within specification</span></td>
+                <td style="padding:8px 0;text-align:right;color:rgba(255,255,255,0.4);font-size:0.75rem"><span class="lang-fr">Sur demande</span><span class="lang-en">On request</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.05)">
+                <td style="padding:8px 0;color:rgba(255,255,255,0.75);font-weight:500"><span class="lang-fr">Oxyde de fer (Fe₂O₃)</span><span class="lang-en">Iron oxide (Fe₂O₃)</span></td>
+                <td style="padding:8px;text-align:center"><span style="color:#4ade80;font-weight:700;font-size:0.88rem"><span class="lang-fr">Faible</span><span class="lang-en">Low</span></span></td>
+                <td style="padding:8px 0;text-align:right;color:rgba(255,255,255,0.4);font-size:0.75rem"><span class="lang-fr">Compatible pâte blanche</span><span class="lang-en">White body compatible</span></td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,0.05)">
+                <td style="padding:8px 0;color:rgba(255,255,255,0.75);font-weight:500"><span class="lang-fr">Oxydes alcalins</span><span class="lang-en">Alkali oxides</span></td>
+                <td style="padding:8px;text-align:center;color:rgba(255,255,255,0.5);font-size:0.8rem"><span class="lang-fr">Conforme à l'usage</span><span class="lang-en">Within specification</span></td>
+                <td style="padding:8px 0;text-align:right;color:rgba(255,255,255,0.4);font-size:0.75rem"><span class="lang-fr">Sur demande</span><span class="lang-en">On request</span></td>
+              </tr>
+              <tr>
+                <td style="padding:8px 0;color:rgba(255,255,255,0.75);font-weight:500"><span class="lang-fr">Perte au feu (PAF)</span><span class="lang-en">Loss on ignition (LOI)</span></td>
+                <td style="padding:8px;text-align:center;color:rgba(255,255,255,0.5);font-size:0.8rem"><span class="lang-fr">Caractéristique kaolin</span><span class="lang-en">Kaolin characteristic</span></td>
+                <td style="padding:8px 0;text-align:right;color:rgba(255,255,255,0.4);font-size:0.75rem"><span class="lang-fr">Caractérisation disponible</span><span class="lang-en">Characterisation available</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <p style="font-size:0.68rem;color:rgba(255,255,255,0.25);margin-top:0.75rem;font-style:italic"><span class="lang-fr">Données validées par Dangote Cement et CIMAF Sénégal. Certificats ISO 17025 disponibles sur demande.</span><span class="lang-en">Data validated by Dangote Cement and CIMAF Senegal. ISO 17025 certificates available on request.</span></p>
+        </div>
+
+        <div style="height:1px;background:rgba(255,255,255,0.06);margin:0 2rem"></div>
+        <div class="px-8 py-5">
+          <div style="font-size:0.67rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:0.75rem"><span class="lang-fr">Applications visées</span><span class="lang-en">Target applications</span></div>
+          <ul style="list-style:none;padding:0;margin:0" class="lang-fr">
+            <li style="display:flex;align-items:flex-start;gap:8px;margin-bottom:6px"><span style="width:5px;height:5px;border-radius:50%;background:#FF6B00;margin-top:6px;flex-shrink:0"></span><span style="font-size:0.8rem;color:rgba(255,255,255,0.6)">Grès cérame technique haute pureté</span></li>
+            <li style="display:flex;align-items:flex-start;gap:8px;margin-bottom:6px"><span style="width:5px;height:5px;border-radius:50%;background:#FF6B00;margin-top:6px;flex-shrink:0"></span><span style="font-size:0.8rem;color:rgba(255,255,255,0.6)">Pâtes blanches pour carreaux grand format (&gt;1 m²)</span></li>
+            <li style="display:flex;align-items:flex-start;gap:8px;margin-bottom:6px"><span style="width:5px;height:5px;border-radius:50%;background:#FF6B00;margin-top:6px;flex-shrink:0"></span><span style="font-size:0.8rem;color:rgba(255,255,255,0.6)">Industrie cimentière : applications spécifiques</span></li>
+            <li style="display:flex;align-items:flex-start;gap:8px;margin-bottom:6px"><span style="width:5px;height:5px;border-radius:50%;background:#FF6B00;margin-top:6px;flex-shrink:0"></span><span style="font-size:0.8rem;color:rgba(255,255,255,0.6)">Émaux et engobes haute alumine</span></li>
+            <li style="display:flex;align-items:flex-start;gap:8px"><span style="width:5px;height:5px;border-radius:50%;background:#FF6B00;margin-top:6px;flex-shrink:0"></span><span style="font-size:0.8rem;color:rgba(255,255,255,0.6)">Réfractaires céramiques haute température</span></li>
+          </ul>
+          <ul style="list-style:none;padding:0;margin:0" class="lang-en">
+            <li style="display:flex;align-items:flex-start;gap:8px;margin-bottom:6px"><span style="width:5px;height:5px;border-radius:50%;background:#FF6B00;margin-top:6px;flex-shrink:0"></span><span style="font-size:0.8rem;color:rgba(255,255,255,0.6)">High-purity technical porcelain stoneware</span></li>
+            <li style="display:flex;align-items:flex-start;gap:8px;margin-bottom:6px"><span style="width:5px;height:5px;border-radius:50%;background:#FF6B00;margin-top:6px;flex-shrink:0"></span><span style="font-size:0.8rem;color:rgba(255,255,255,0.6)">White-body pastes for large-format tiles (&gt;1 m²)</span></li>
+            <li style="display:flex;align-items:flex-start;gap:8px;margin-bottom:6px"><span style="width:5px;height:5px;border-radius:50%;background:#FF6B00;margin-top:6px;flex-shrink:0"></span><span style="font-size:0.8rem;color:rgba(255,255,255,0.6)">Cement industry: specific applications</span></li>
+            <li style="display:flex;align-items:flex-start;gap:8px;margin-bottom:6px"><span style="width:5px;height:5px;border-radius:50%;background:#FF6B00;margin-top:6px;flex-shrink:0"></span><span style="font-size:0.8rem;color:rgba(255,255,255,0.6)">High-alumina glazes and engobes</span></li>
+            <li style="display:flex;align-items:flex-start;gap:8px"><span style="width:5px;height:5px;border-radius:50%;background:#FF6B00;margin-top:6px;flex-shrink:0"></span><span style="font-size:0.8rem;color:rgba(255,255,255,0.6)">High-temperature ceramic refractories</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Download CTA ─────────────────────────────────────────── -->
+    <div class="reveal" style="background:linear-gradient(135deg,rgba(255,107,0,0.1),rgba(255,107,0,0.04));border:1px solid rgba(255,107,0,0.2);border-radius:12px;padding:2rem 2.5rem;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.5rem">
+      <div>
+        <h3 class="font-serif font-bold text-white mb-1" style="font-size:1.1rem" data-i18n="act.fiche.cta.title">Fiches Techniques Complètes</h3>
+        <p style="font-size:0.83rem;color:rgba(255,255,255,0.45);max-width:420px" data-i18n="act.fiche.cta.sub">Granite SF18B (GSP-GR-SF18B) + Kaolin Haute Alumine (GSP-KA-TC01) — Données chimiques, spécifications, conditionnement.</p>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:0.75rem;align-items:center">
+        <a href="docs/GSP-Fiches-Techniques-Granite-Kaolin.pdf" download
+           class="inline-flex items-center gap-2 font-semibold text-sm px-5 py-2.5 rounded"
+           style="background:#FF6B00;color:white;text-decoration:none;transition:background 0.2s"
+           onmouseover="this.style.background='#e05500'" onmouseout="this.style.background='#FF6B00'">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          <span data-i18n="act.fiche.dl">Télécharger le PDF</span>
+        </a>
+        <a href="contact.html" class="inline-flex items-center gap-2 font-semibold text-sm px-5 py-2.5 rounded"
+           style="border:1.5px solid rgba(255,107,0,0.4);color:#FF6B00;text-decoration:none;background:transparent;transition:all 0.2s"
+           onmouseover="this.style.background='rgba(255,107,0,0.08)'" onmouseout="this.style.background='transparent'">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+          <span data-i18n="act.fiche.quote">Demander un devis</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SECTION 2 — HYDROCARBURES (cinématographique) -->
+<section id="hydrocarbures" class="activity-section" style="position:relative;overflow:hidden;min-height:92vh;display:flex;flex-direction:column;justify-content:flex-end">
+
+  <!-- Image background avec Ken Burns -->
+  <div class="hydro-bg-wrap" style="position:absolute;inset:0;z-index:0;overflow:hidden">
+    <picture>
+      <source media="(max-width:767px)" srcset="images/camion-mobile.webp" type="image/webp">
+      <source media="(max-width:767px)" srcset="images/camion-mobile.jpg">
+      <source media="(max-width:1023px)" srcset="images/camion-tablet.webp" type="image/webp">
+      <source srcset="images/camion-hero.webp" type="image/webp">
+      <img src="images/camion-hero.jpg" alt="Camion citerne GS Petroleum — axe Dakar-Thiès"
+           loading="lazy" fetchpriority="low"
+           class="hydro-bg-img"
+           style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;transform-origin:center">
+    </picture>
+
+    <!-- Dégradé cinématographique multi-couches -->
+    <div style="position:absolute;inset:0;background:linear-gradient(to top, rgba(10,28,46,0.97) 0%, rgba(10,28,46,0.72) 40%, rgba(10,28,46,0.28) 70%, rgba(10,28,46,0.1) 100%)"></div>
+    <!-- Vignette latérale gauche -->
+    <div style="position:absolute;inset:0;background:linear-gradient(to right, rgba(10,28,46,0.55) 0%, transparent 50%)"></div>
+    <!-- Grain subtil -->
+    <div class="hydro-grain" style="position:absolute;inset:0;opacity:0.025;pointer-events:none"></div>
+  </div>
+
+  <!-- Bande dorée top -->
+  <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,#FF6B00 30%,#FFD4A8 50%,#FF6B00 70%,transparent);z-index:2;opacity:0.7"></div>
+
+  <!-- Contenu principal -->
+  <div class="relative w-full" style="z-index:2;padding: 6rem 0 5rem">
+    <div class="max-w-6xl mx-auto px-6">
+
+      <!-- Badge + titre -->
+      <div class="hydro-content reveal-hydro" style="max-width:680px">
+        <div class="badge-gsp" style="color:#FFD4A8;border-color:rgba(232,217,184,0.35);background:rgba(232,217,184,0.08);margin-bottom:1.2rem">
+          <span style="background:#FF6B00" class="badge-dot"></span><span data-i18n="act.badge2">Distribution d'Hydrocarbures</span>
+        </div>
+        <h2 class="font-serif font-bold text-white" style="font-size:clamp(2rem,4vw,3.2rem);line-height:1.1;margin-bottom:1rem" data-i18n="act.hydro.h2">
+          Une présence active<br/>sur les routes<br/><em style="color:#FF6B00;font-style:italic">du Sénégal</em>
+        </h2>
+        <div style="width:60px;height:3px;background:linear-gradient(90deg,#FF6B00,transparent);margin:1.2rem 0 1.6rem"></div>
+        <p class="text-white/70 leading-relaxed lang-fr" style="font-size:1rem;max-width:560px;margin-bottom:1rem">
+          Notre branche hydrocarbures opère sous licence officielle accordée par arrêté ministériel n° 001481 du 19 janvier 2023 — valable 10 ans renouvelables. Une infrastructure logistique au service des besoins énergétiques régionaux.
+        </p>
+        <p class="text-white/70 leading-relaxed lang-en" style="font-size:1rem;max-width:560px;margin-bottom:1rem">
+          Our hydrocarbon branch operates under an official licence granted by ministerial order n° 001481 of 19 January 2023 — valid for 10 renewable years. Logistics infrastructure in service of regional energy needs.
+        </p>
+        <p class="text-white/60 leading-relaxed lang-fr" style="font-size:0.92rem;max-width:520px;margin-bottom:2.2rem">
+          Déploiement d'un réseau de 5 stations-service à l'horizon 2028, avec une flotte de transport dédiée certifiée ADR (matières dangereuses).
+        </p>
+        <p class="text-white/60 leading-relaxed lang-en" style="font-size:0.92rem;max-width:520px;margin-bottom:2.2rem">
+          Deployment of a 5-station network by 2028, with a dedicated transport fleet ADR-certified for hazardous materials.
+        </p>
+
+        <!-- Licence badge premium -->
+        <div class="hydro-licence reveal-hydro-delay" style="display:inline-flex;align-items:center;gap:12px;background:rgba(255,107,0,0.12);border:1px solid rgba(255,107,0,0.35);border-radius:8px;padding:12px 20px;margin-bottom:2.5rem;backdrop-filter:blur(8px)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF6B00" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+          <div>
+            <div style="font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#FF6B00;line-height:1.2" data-i18n="act.hydro.lic.title">Licence officielle</div>
+            <div style="font-size:0.82rem;color:rgba(255,255,255,0.75);line-height:1.4" data-i18n="act.hydro.lic.sub">Ministère du Pétrole et des Énergies — Sénégal</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats glassmorphism -->
+      <div class="hydro-stats reveal-hydro-delay2" style="display:flex;flex-wrap:wrap;gap:1px;max-width:700px">
+        <div class="hydro-stat-card">
+          <div class="hydro-stat-num">10</div>
+          <div class="hydro-stat-unit"><span class="lang-fr">ans</span><span class="lang-en">years</span></div>
+          <div class="hydro-stat-label" data-i18n="act.hydro.s1">Durée de la licence</div>
+        </div>
+        <div class="hydro-stat-card">
+          <div class="hydro-stat-num">5</div>
+          <div class="hydro-stat-unit">stations</div>
+          <div class="hydro-stat-label" data-i18n="act.hydro.s2">Réseau en déploiement</div>
+        </div>
+        <div class="hydro-stat-card">
+          <div class="hydro-stat-num">2023</div>
+          <div class="hydro-stat-unit"></div>
+          <div class="hydro-stat-label" data-i18n="act.hydro.s3">Licence obtenue</div>
+        </div>
+        <div class="hydro-stat-card">
+          <div class="hydro-stat-num">ADR</div>
+          <div class="hydro-stat-unit"></div>
+          <div class="hydro-stat-label" data-i18n="act.hydro.s4">Flotte certifiée</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div style="position:absolute;bottom:2rem;right:2rem;z-index:3;display:flex;flex-direction:column;align-items:center;gap:6px;opacity:0.45">
+    <span style="font-size:0.6rem;color:white;letter-spacing:0.15em;text-transform:uppercase;writing-mode:vertical-rl" data-i18n="act.hydro.scroll">Défiler</span>
+    <div style="width:1px;height:40px;background:linear-gradient(to bottom,rgba(255,255,255,0.6),transparent)"></div>
+  </div>
+</section>
+
+<!-- SECTION 3 — SANTÉ NUMÉRIQUE -->
+<section id="sante" class="activity-section bg-white py-24">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+      <div class="reveal-left">
+        <div class="badge-gsp"><span class="badge-dot"></span><span data-i18n="act.badge3">Preventis Health Africa</span></div>
+        <h2 class="font-serif font-bold text-3xl mb-3" style="color:#111111" data-i18n="act.a3.h">Santé Numérique</h2>
+        <div class="gold-divider"></div>
+        <p class="text-[#4b5563] leading-relaxed mb-4 lang-fr">
+          Notre branche santé est portée par Preventis Health Africa SAS, holding régionale dédiée au déploiement du premier réseau de centres de dépistage médical assisté par intelligence artificielle en Afrique de l'Ouest.
+        </p>
+        <p class="text-[#4b5563] leading-relaxed mb-4 lang-en">
+          Our health branch is carried by Preventis Health Africa SAS, a regional holding company dedicated to deploying the first AI-assisted medical screening centre network in West Africa.
+        </p>
+        <p class="text-[#4b5563] leading-relaxed mb-6 lang-fr">
+          Le déploiement s'effectue en partenariat stratégique avec FUJIFILM DKH LLP (Fujifilm Group, Tokyo), via la franchise NURA. Notre ambition est de démocratiser l'accès à un dépistage radiologique de qualité internationale dans la zone CEDEAO.
+        </p>
+        <p class="text-[#4b5563] leading-relaxed mb-6 lang-en">
+          Deployment is conducted in strategic partnership with FUJIFILM DKH LLP (Fujifilm Group, Tokyo), through the NURA franchise. Our aim is to democratise access to international-standard radiological screening across the ECOWAS zone.
+        </p>
+        <div class="rounded-lg p-4 mb-6 border-l-4 lang-fr" style="background:#FAFAFA;border-left-color:#FF6B00">
+          <p class="text-sm text-[#3A3A3A] leading-relaxed">
+            <strong style="color:#111111">Première franchise NURA</strong> déployée en Afrique de l'Ouest, en partenariat avec Fujifilm DKH LLP.
+          </p>
+        </div>
+        <div class="rounded-lg p-4 mb-6 border-l-4 lang-en" style="background:#FAFAFA;border-left-color:#FF6B00">
+          <p class="text-sm text-[#3A3A3A] leading-relaxed">
+            <strong style="color:#111111">First NURA franchise</strong> deployed in West Africa, in partnership with Fujifilm DKH LLP.
+          </p>
+        </div>
+        <ul class="space-y-1 lang-fr">
+          <li class="feature-li">Imagerie médicale de pointe (scanner, IRM, mammographie)</li>
+          <li class="feature-li">Lecture assistée par intelligence artificielle</li>
+          <li class="feature-li">Protocoles cliniques internationaux</li>
+          <li class="feature-li">Démarrage Sénégal, extension sous-régionale progressive vers la CEDEAO</li>
+          <li class="feature-li">Tour Series A en cours, mandat Comtech Group (Londres)</li>
+        </ul>
+        <ul class="space-y-1 lang-en">
+          <li class="feature-li">Advanced medical imaging (CT scan, MRI, mammography)</li>
+          <li class="feature-li">AI-assisted reading and diagnosis</li>
+          <li class="feature-li">International clinical protocols</li>
+          <li class="feature-li">Starting in Senegal, progressive sub-regional rollout across ECOWAS</li>
+          <li class="feature-li">Series A round underway, mandated through Comtech Group (London)</li>
+        </ul>
+      </div>
+
+      <div class="reveal-right">
+        <div class="rounded-xl overflow-hidden" style="height:480px;background:linear-gradient(135deg,#0A0A0A,#111111);position:relative">
+          <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-8">
+            <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-4" style="background:rgba(255,107,0,0.15)">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF6B00" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+            </div>
+            <div class="font-serif font-bold text-3xl text-white mb-1">NURA</div>
+            <div class="text-sm mb-3" style="color:#FF6B00">Franchise Fujifilm</div>
+            <div class="text-xs text-white/40">Preventis Health Africa SAS<br/>1re implantation CEDEAO</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4 — ÉCONOMIE CIRCULAIRE -->
+<section id="circulaire" class="activity-section py-24" style="background:#FAFAFA">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+      <div class="reveal-left order-2 md:order-1">
+        <div class="rounded-xl overflow-hidden" style="height:480px;background:linear-gradient(135deg,#111111,#0A0A0A);position:relative">
+          <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-8">
+            <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-4" style="background:rgba(255,107,0,0.15)">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF6B00" stroke-width="1.5"><path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.66 0 3-4.03 3-9s-1.34-9-3-9m0 18c-1.66 0-3-4.03-3-9s1.34-9 3-9"/></svg>
+            </div>
+            <div class="font-serif font-bold text-2xl text-white mb-1">CITABEL</div>
+            <div class="text-sm mb-4" style="color:#FF6B00">Économie Circulaire</div>
+            <div class="grid grid-cols-2 gap-2 w-full max-w-xs">
+              <div class="text-xs text-white/50 p-2 rounded" style="background:rgba(255,255,255,0.05)">Bio-méthanol</div>
+              <div class="text-xs text-white/50 p-2 rounded" style="background:rgba(255,255,255,0.05)">Biogaz</div>
+              <div class="text-xs text-white/50 p-2 rounded" style="background:rgba(255,255,255,0.05)">Biofertilisants</div>
+              <div class="text-xs text-white/50 p-2 rounded" style="background:rgba(255,255,255,0.05)">Composites</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal-right order-1 md:order-2">
+        <div class="badge-gsp"><span class="badge-dot"></span><span data-i18n="act.badge4">CITABEL</span></div>
+        <h2 class="font-serif font-bold text-3xl mb-3" style="color:#111111" data-i18n="act.a4.h">Économie Circulaire</h2>
+        <div class="gold-divider"></div>
+        <p class="text-[#4b5563] leading-relaxed mb-4 lang-fr">
+          Notre branche économie circulaire est structurée par CITABEL, hub articulé autour de quatre axes complémentaires : bio-méthanol, biogaz, biofertilisants et valorisation des déchets plastiques en matériaux composites.
+        </p>
+        <p class="text-[#4b5563] leading-relaxed mb-4 lang-en">
+          Our circular economy branch is structured by CITABEL, a hub built around four complementary pillars: bio-methanol, biogas, biofertilisers and valorisation of plastic waste into composite materials.
+        </p>
+        <p class="text-[#4b5563] leading-relaxed mb-6 lang-fr">
+          L'architecture du projet repose sur un partenariat triangulaire structurant : Sénégal pour l'ancrage opérationnel, Finlande pour la technologie (via Nordic Eco Innovation), Union Européenne pour le financement amorçage et la certification ISCC EU. Un partenaire industriel indien de premier rang complète le dispositif sur la valorisation des déchets plastiques.
+        </p>
+        <p class="text-[#4b5563] leading-relaxed mb-6 lang-en">
+          The project rests on a structuring triangular partnership: Senegal for operational anchoring, Finland for technology (via Nordic Eco Innovation), and the European Union for seed financing and ISCC EU certification. A leading Indian industrial partner completes the arrangement on plastic waste valorisation.
+        </p>
+        <div class="rounded-lg p-4 mb-6 border-l-4 lang-fr" style="background:white;border-left-color:#FF6B00;box-shadow:0 1px 3px rgba(0,0,0,0.06)">
+          <p class="text-sm text-[#3A3A3A] leading-relaxed">
+            <strong style="color:#111111">Visée certification ISCC EU</strong> pour alignement aux standards internationaux de décarbonation du transport maritime et de l'industrie lourde.
+          </p>
+        </div>
+        <div class="rounded-lg p-4 mb-6 border-l-4 lang-en" style="background:white;border-left-color:#FF6B00;box-shadow:0 1px 3px rgba(0,0,0,0.06)">
+          <p class="text-sm text-[#3A3A3A] leading-relaxed">
+            <strong style="color:#111111">ISCC EU certification target</strong> for alignment with international decarbonation standards for maritime transport and heavy industry.
+          </p>
+        </div>
+        <ul class="space-y-1 lang-fr">
+          <li class="feature-li">Bio-méthanol (alternative décarbonée pour le transport maritime)</li>
+          <li class="feature-li">Biogaz (valorisation énergétique des déchets organiques)</li>
+          <li class="feature-li">Biofertilisants (sortie agronomique de la chaîne)</li>
+          <li class="feature-li">Matériaux composites pour construction et infrastructure</li>
+          <li class="feature-li">Partenariats : Nordic Eco Innovation, Union Européenne, partenaire industriel indien de premier rang</li>
+        </ul>
+        <ul class="space-y-1 lang-en">
+          <li class="feature-li">Bio-methanol (decarbonised alternative for maritime transport)</li>
+          <li class="feature-li">Biogas (energy valorisation of organic waste)</li>
+          <li class="feature-li">Biofertilisers (agronomic output of the chain)</li>
+          <li class="feature-li">Composite materials for construction and infrastructure</li>
+          <li class="feature-li">Partnerships: Nordic Eco Innovation, European Union, leading Indian industrial partner</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5 — LOGISTIQUE -->
+<section id="logistique" class="activity-section bg-white py-24">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+      <div class="reveal-left">
+        <div class="badge-gsp"><span class="badge-dot"></span><span data-i18n="act.badge5">Flotte Industrielle</span></div>
+        <h2 class="font-serif font-bold text-3xl mb-3" style="color:#111111" data-i18n="act.a5.h">Logistique Industrielle</h2>
+        <div class="gold-divider"></div>
+        <p class="text-[#4b5563] leading-relaxed mb-4 lang-fr">
+          La logistique est un maillon indispensable de notre chaîne de valeur. Notre flotte dédiée assure le transport des matériaux extractifs depuis les sites de production vers les industries clientes, garantissant la maîtrise opérationnelle de nos contrats-cadres.
+        </p>
+        <p class="text-[#4b5563] leading-relaxed mb-4 lang-en">
+          Logistics is an essential link in our value chain. Our dedicated fleet handles the transport of extractive materials from production sites to client industries, guaranteeing the operational control of our framework contracts.
+        </p>
+        <p class="text-[#4b5563] leading-relaxed mb-6 lang-fr">
+          Le financement de la flotte est structuré sous crédit-bail institutionnel avec un partenaire bancaire de premier rang, assurant solidité financière et prévisibilité opérationnelle.
+        </p>
+        <p class="text-[#4b5563] leading-relaxed mb-6 lang-en">
+          Fleet financing is structured under institutional leasing with a leading banking partner, ensuring financial solidity and operational predictability.
+        </p>
+        <ul class="space-y-1 lang-fr">
+          <li class="feature-li">Flotte dédiée au transport de matériaux extractifs</li>
+          <li class="feature-li">Trajet Saraya-Dakar et Dialacoto-Dakar optimisé</li>
+          <li class="feature-li">Crédit-bail institutionnel structuré</li>
+          <li class="feature-li">Capacité d'extension vers la sous-région CEDEAO</li>
+          <li class="feature-li">Sécurisation des engagements contractuels clients</li>
+        </ul>
+        <ul class="space-y-1 lang-en">
+          <li class="feature-li">Fleet dedicated to extractive materials transport</li>
+          <li class="feature-li">Optimised Saraya-Dakar and Dialacoto-Dakar routes</li>
+          <li class="feature-li">Structured institutional leasing</li>
+          <li class="feature-li">Extension capacity towards the ECOWAS sub-region</li>
+          <li class="feature-li">Securing client contractual commitments</li>
+        </ul>
+      </div>
+
+      <div class="reveal-right">
+        <div class="rounded-xl overflow-hidden" style="height:480px;background:linear-gradient(135deg,#0A0A0A,#111111);position:relative">
+          <img src="images/granite-2.jpg" alt="Logistique industrielle GSP" loading="lazy" class="w-full h-full object-cover">
+          <div class="absolute inset-0 flex items-center justify-center" style="background:rgba(10,10,10,0.5)">
+            <div class="text-center">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,107,0,0.6)" stroke-width="1.5" class="mx-auto mb-3"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+              <p class="text-white/40 text-sm font-medium">Logistique Industrielle</p>
+              <p class="text-xs mt-1" style="color:#FF6B00">Saraya & Dialacoto → Dakar</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6 — KWM -->
+<section id="kwm" class="py-24" style="background:#111111">
+  <div class="max-w-3xl mx-auto px-6 text-center reveal">
+    <div class="badge-gsp" style="color:#FFD4A8;border-color:rgba(232,217,184,0.3);background:rgba(232,217,184,0.07);display:inline-flex;margin-bottom:1rem"><span style="background:#FFD4A8" class="badge-dot"></span>Expansion Régionale</div>
+    <h2 class="font-serif font-bold text-white mb-2" style="font-size:clamp(1.8rem,3.5vw,2.8rem)">Kairos West Mining</h2>
+    <p class="text-sm font-semibold mb-8" style="color:#FF6B00" data-i18n="act.kwm.subtitle">Notre véhicule d'expansion sous-régional</p>
+    <p class="text-white/65 leading-relaxed mb-8 lang-fr" style="font-size:1rem">
+      Kairos West Mining (KWM) est le véhicule d'expansion du Groupe GSP dans la sous-région ouest-africaine, dédié à l'extension de nos activités minières. La société est actuellement en cours de constitution dans la sous-région.
+    </p>
+    <p class="text-white/65 leading-relaxed mb-8 lang-en" style="font-size:1rem">
+      Kairos West Mining (KWM) is GSP Group's expansion vehicle in the West African sub-region, dedicated to the extension of our mining activities. The company is currently being incorporated in the sub-region.
+    </p>
+    <div class="rounded-xl p-6 mx-auto max-w-md" style="background:#FFD4A8">
+      <p class="font-semibold text-sm" style="color:#111111" data-i18n="act.kwm.mou">
+        Mémorandum d'Entente signé le 7 mai 2026.<br/>Constitution juridique programmée pour le second semestre 2026.
+      </p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer style="background:#0A0A0A">
+  <div class="max-w-6xl mx-auto px-6 pt-16 pb-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+      <div>
+        <a href="index.html" class="flex items-center gap-3 mb-4" style="text-decoration:none">
+          <picture>
+            <source srcset="images/logo-gsp.webp" type="image/webp">
+            <img src="images/logo-gsp-white.png" alt="General Service Petroleum"
+                 style="height:40px;width:auto;display:block"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          </picture>
+          <div style="display:none;align-items:center;gap:8px">
+            <div style="width:38px;height:38px;background:rgba(255,255,255,0.1);border-radius:6px;display:flex;align-items:center;justify-content:center;font-weight:900;font-style:italic;color:white;font-size:15px;font-family:'Arial Black',Arial,sans-serif">GP</div>
+            <div>
+              <div style="font-weight:800;font-size:10px;color:white;font-family:'Arial Black',Arial,sans-serif">GENERAL SERVICE</div>
+              <div style="font-weight:800;font-size:10px;color:#FF6B00;font-family:'Arial Black',Arial,sans-serif">PETROLEUM</div>
+            </div>
+          </div>
+        </a>
+        <p class="text-sm text-white/40 leading-relaxed">General Service Petroleum<br/>Cité Ataya, Immeuble 6 Apt 673<br/>Nord Foire, Dakar — Sénégal</p>
+      </div>
+      <div>
+        <h4 class="text-xs font-bold tracking-[0.14em] uppercase mb-5" style="color:#FF6B00" data-i18n="footer.nav">Navigation</h4>
+        <ul class="space-y-3">
+          <li><a href="index.html" class="text-sm text-white/50 hover:text-white transition-colors" style="text-decoration:none" data-i18n="nav.home">Accueil</a></li>
+          <li><a href="activites.html" class="text-sm text-white/70 hover:text-white transition-colors" style="text-decoration:none" data-i18n="nav.activities">Activités</a></li>
+          <li><a href="partenariats.html" class="text-sm text-white/50 hover:text-white transition-colors" style="text-decoration:none" data-i18n="nav.partners">Partenariats</a></li>
+          <li><a href="equipe.html" class="text-sm text-white/50 hover:text-white transition-colors" style="text-decoration:none" data-i18n="nav.team">Équipe</a></li>
+          <li><a href="contact.html" class="text-sm text-white/50 hover:text-white transition-colors" style="text-decoration:none" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-xs font-bold tracking-[0.14em] uppercase mb-5" style="color:#FF6B00" data-i18n="footer.contact">Contact</h4>
+        <div class="space-y-3">
+          <a href="mailto:contact@gspetroleum.sn" class="flex gap-2.5 items-center text-sm text-white/50 hover:text-white transition-colors" style="text-decoration:none"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF6B00" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>contact@gspetroleum.sn</a>
+          <a href="tel:+221777528181" class="flex gap-2.5 items-center text-sm text-white/50 hover:text-white transition-colors" style="text-decoration:none"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF6B00" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.03 1.18 2 2 0 012 .03h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>+221 77 752 81 81</a>
+        </div>
+      </div>
+    </div>
+    <div class="pt-6 text-center" style="border-top:1px solid rgba(255,107,0,0.2)">
+      <p class="text-xs text-white/30 mb-1">© <span class="footer-year"></span> General Service Petroleum. <span data-i18n="footer.rights">Tous droits réservés.</span></p>
+      <p class="text-xs text-white/20">RCCM SN DKR 2021 B 3476 &nbsp;|&nbsp; NINEA 008344210 2Y2</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

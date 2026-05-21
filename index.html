@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GSP — General Service Petroleum | Groupe Industriel Sénégalais</title>
+  <meta name="description" content="General Service Petroleum (GSP) est un groupe industriel sénégalais multi-sectoriel fondé en 2021, opérant dans les industries extractives, l'énergie, la santé numérique, l'économie circulaire et la logistique."/>
+  <meta name="keywords" content="GSP, General Service Petroleum, groupe industriel Sénégal, industries extractives, hydrocarbures, NURA Fujifilm, KEDA, Dakar"/>
+  <link rel="canonical" href="https://gspetroleum.sn/"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://gspetroleum.sn/"/>
+  <meta property="og:title" content="GSP — General Service Petroleum"/>
+  <meta property="og:description" content="Groupe industriel sénégalais multi-sectoriel — Industries extractives, Énergie, Santé numérique, Économie circulaire, Logistique."/>
+  <meta property="og:locale" content="fr_FR"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="GSP — General Service Petroleum"/>
+  <meta name="twitter:image" content="https://gspetroleum.sn/images/og-image.png"/>
+  <meta property="og:image" content="https://gspetroleum.sn/images/og-image.png"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png"/>
+  <link rel="icon" type="image/png" sizes="192x192" href="images/favicons/favicon-192x192.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png"/>
+  <meta name="theme-color" content="#0A0A0A"/>
+
+  <!-- Détection langue AVANT rendu CSS (évite le flash FR→EN) -->
+  <script>(function(){var s=localStorage.getItem('gsp-lang');document.documentElement.lang=s&&['fr','en'].includes(s)?s:(navigator.language||'').toLowerCase().startsWith('en')?'en':'fr';})()</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400;1,700&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#111111',
+            'dark-navy': '#0A0A0A',
+            gold: '#FF6B00',
+            'light-gold': '#FFD4A8',
+            muted: '#6B6B6B',
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/custom.css"/>
+
+  <!-- Schema.org Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "General Service Petroleum",
+    "alternateName": "GSP",
+    "url": "https://gspetroleum.sn",
+    "logo": "https://gspetroleum.sn/images/logo-gsp.png",
+    "description": "Groupe industriel sénégalais multi-sectoriel fondé en 2021, opérant dans les industries extractives, la distribution d'hydrocarbures, la santé numérique, l'économie circulaire et la logistique.",
+    "foundingDate": "2021",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Cité Ataya, Immeuble 6 Apt 673",
+      "addressLocality": "Nord Foire, Dakar",
+      "addressCountry": "SN"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": ["+221777528181", "+221338434399"],
+      "contactType": "customer service",
+      "email": "contact@gspetroleum.sn",
+      "availableLanguage": "French"
+    },
+    "sameAs": ["https://gspetroleum.sn"]
+  }
+  </script>
+</head>
+<body class="bg-white text-[#3A3A3A] font-sans">
+
+<!-- OVERLAY MOBILE -->
+<div id="menu-overlay" class="mobile-menu-overlay"></div>
+
+<!-- MOBILE MENU -->
+<nav id="mobile-menu" class="mobile-menu">
+  <div class="flex justify-between items-center mb-8">
+    <span class="text-white font-bold text-sm tracking-widest uppercase">Menu</span>
+    <button id="menu-close" class="text-white p-1" aria-label="Fermer">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <a href="index.html" class="nav-link active" data-i18n="nav.home">Accueil</a>
+  <a href="activites.html" class="nav-link" data-i18n="nav.activities">Activités</a>
+  <a href="partenariats.html" class="nav-link" data-i18n="nav.partners">Partenariats</a>
+  <a href="equipe.html" class="nav-link" data-i18n="nav.team">Équipe</a>
+  <a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a>
+  <a href="contact.html" class="mt-6 block text-center font-semibold text-sm px-5 py-2.5 rounded" style="color:white;background:#FF6B00" data-i18n="nav.cta">Nous contacter</a>
+</nav>
+
+<!-- HEADER -->
+<header id="site-header" class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100 transition-shadow duration-300">
+  <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+    <!-- Logo -->
+    <a href="index.html" class="flex items-center" style="text-decoration:none">
+      <picture>
+        <source srcset="images/logo-gsp.webp" type="image/webp">
+        <img src="images/logo-gsp.png" alt="General Service Petroleum"
+             style="height:48px;width:auto;display:block"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      </picture>
+      <!-- Fallback text logo -->
+      <div class="items-center gap-2.5" style="display:none">
+        <div style="width:44px;height:44px;background:#111;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:900;font-style:italic;color:white;font-size:18px;font-family:'Arial Black',Arial,sans-serif;letter-spacing:-1px">GP</div>
+        <div>
+          <div style="font-weight:800;font-size:11px;color:#111;font-family:'Arial Black',Arial,sans-serif;letter-spacing:0.05em;line-height:1.2">GENERAL SERVICE</div>
+          <div style="font-weight:800;font-size:11px;color:#FF6B00;font-family:'Arial Black',Arial,sans-serif;letter-spacing:0.05em;line-height:1.2">PETROLEUM</div>
+        </div>
+      </div>
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="desktop-nav flex items-center gap-1">
+      <a href="index.html" class="nav-link px-4 py-2 text-sm font-medium text-[#3A3A3A] rounded transition-colors active" data-i18n="nav.home">Accueil</a>
+      <a href="activites.html" class="nav-link px-4 py-2 text-sm font-medium text-[#3A3A3A] rounded transition-colors" data-i18n="nav.activities">Activités</a>
+      <a href="partenariats.html" class="nav-link px-4 py-2 text-sm font-medium text-[#3A3A3A] rounded transition-colors" data-i18n="nav.partners">Partenariats</a>
+      <a href="equipe.html" class="nav-link px-4 py-2 text-sm font-medium text-[#3A3A3A] rounded transition-colors" data-i18n="nav.team">Équipe</a>
+      <a href="contact.html" class="nav-link px-4 py-2 text-sm font-medium text-[#3A3A3A] rounded transition-colors" data-i18n="nav.contact">Contact</a>
+    </nav>
+
+    <!-- CTA + Hamburger -->
+    <div class="flex items-center gap-3">
+      <!-- Lang switcher -->
+      <div class="lang-switcher" style="margin-right:0.5rem">
+        <button class="lang-btn" data-lang="fr" aria-label="Français">FR</button>
+        <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+      </div>
+      <a href="contact.html" class="header-cta hidden md:inline-flex items-center gap-2 text-sm font-semibold px-4 py-2.5 rounded" style="background:#FF6B00;color:white;transition:background 0.2s" data-i18n="nav.cta"
+        onmouseover="this.style.background='#e05500'" onmouseout="this.style.background='#FF6B00'">
+        Nous contacter
+      </a>
+      <button id="hamburger" class="hamburger-btn flex flex-col gap-1.5 p-2" aria-label="Menu" aria-expanded="false">
+        <span class="block w-6 h-0.5 bg-[#3A3A3A]"></span>
+        <span class="block w-6 h-0.5 bg-[#3A3A3A]"></span>
+        <span class="block w-6 h-0.5 bg-[#3A3A3A]"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ═══════════════════════════════════════════════════════════
+     HERO SLIDESHOW — Cinématographique Premium
+     Slide 0 : Carrière minière à ciel ouvert
+     Slide 1 : Camion-citerne GS Petroleum
+════════════════════════════════════════════════════════════ -->
+<section id="hero-section" aria-label="Hero">
+
+  <!-- ── SLIDE 0 : Mine ── -->
+  <div class="hero-slide active" id="slide-mine" role="img" aria-label="Carrière minière GSP, Sénégal">
+    <div class="hero-slide-bg">
+      <picture>
+        <source media="(max-width:767px)" srcset="images/mine-mobile.webp" type="image/webp">
+        <source media="(max-width:767px)" srcset="images/mine-mobile.jpg">
+        <source media="(max-width:1023px)" srcset="images/mine-tablet.webp" type="image/webp">
+        <source srcset="images/mine-hero.webp" type="image/webp">
+        <img src="images/mine-hero.jpg" alt="Carrière minière à ciel ouvert — GSP Industries Extractives"
+             loading="eager" fetchpriority="high">
+      </picture>
+    </div>
+    <div class="hero-slide-overlay"></div>
+  </div>
+
+  <!-- ── SLIDE 1 : Camion ── -->
+  <div class="hero-slide" id="slide-truck" role="img" aria-label="Camion-citerne GS Petroleum sur l'autoroute">
+    <div class="hero-slide-bg">
+      <picture>
+        <source media="(max-width:767px)" srcset="images/camion-mobile.webp" type="image/webp">
+        <source media="(max-width:767px)" srcset="images/camion-mobile.jpg">
+        <source media="(max-width:1023px)" srcset="images/camion-tablet.webp" type="image/webp">
+        <source srcset="images/camion-hero.webp" type="image/webp">
+        <img src="images/camion-hero.jpg" alt="Camion-citerne GS Petroleum — Distribution hydrocarbures Sénégal"
+             loading="lazy">
+      </picture>
+    </div>
+    <div class="hero-slide-overlay"></div>
+  </div>
+
+  <!-- ── Flash transition ── -->
+  <div id="hero-flash"></div>
+
+  <!-- ── Texture grille ── -->
+  <div class="hero-grid-overlay"></div>
+
+  <!-- ── Orbe décoratif ── -->
+  <div class="hero-orb"></div>
+
+  <!-- ══════════════════════════════════════════
+       CONTENU HERO
+  ══════════════════════════════════════════ -->
+  <div class="hero-content-layer">
+    <div class="max-w-6xl mx-auto px-6 w-full" style="padding-top:7rem;padding-bottom:5rem">
+
+      <!-- Eyebrow statique -->
+      <p class="hero-eyebrow" id="hero-eyebrow-wrap">
+        <span class="hero-eyebrow-line"></span>
+        <span id="hero-eyebrow-text" data-i18n="hero.eyebrow">Groupe Industriel Multi-Sectoriel</span>
+      </p>
+
+      <!-- Badge dynamique par slide -->
+      <div id="hero-slide-badge" style="margin-bottom:1.5rem;min-height:2rem">
+        <div id="hero-badge-inner" style="display:inline-flex;align-items:center;gap:8px;font-size:0.68rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.5);transition:opacity 0.5s ease">
+          <span id="hero-badge-text">Industries Extractives &amp; Minières</span>
+          <span style="opacity:0.4">—</span>
+          <span id="hero-badge-loc" style="color:rgba(255,107,0,0.7)">Kédougou — Sénégal</span>
+        </div>
+      </div>
+
+      <!-- H1 constant -->
+      <div class="max-w-3xl">
+        <h1 class="font-serif font-bold text-white" style="font-size:clamp(2.4rem,5.5vw,4.4rem);line-height:1.08;margin-bottom:1.4rem"
+            data-i18n="hero.title">
+          Construire les champions<br/>
+          <em style="color:#FF6B00;font-style:italic">industriels</em> de<br/>
+          l'Afrique de l'Ouest.
+        </h1>
+
+        <!-- Sous-titre -->
+        <p class="hero-sub-text" id="hero-subtitle"
+           style="font-size:clamp(0.95rem,1.5vw,1.15rem);color:rgba(255,255,255,0.62);line-height:1.7;max-width:520px;margin-bottom:2.4rem"
+           data-i18n="hero.subtitle">
+          Du Sénégal vers la zone CEDEAO. Des partenariats internationaux structurés. Une ambition régionale assumée.
+        </p>
+
+        <!-- CTAs -->
+        <div style="display:flex;flex-wrap:wrap;gap:1rem;margin-bottom:0">
+          <a href="activites.html" class="btn-primary" data-i18n-href>
+            <span data-i18n="hero.btn1">Découvrir nos activités</span>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="contact.html" class="btn-secondary" data-i18n="hero.btn2">Nous contacter</a>
+        </div>
+      </div>
+
+      <!-- Stats strip -->
+      <div style="margin-top:4rem;padding-top:2.5rem;border-top:1px solid rgba(255,255,255,0.08);display:flex;flex-wrap:wrap;gap:2.5rem">
+        <div class="reveal" data-delay="0.1">
+          <div class="font-serif font-bold text-white" style="font-size:2.2rem;line-height:1" data-i18n="hero.stat1.num">120 000</div>
+          <div class="text-xs mt-1 tracking-wide" style="color:rgba(255,255,255,0.38)" data-i18n="hero.stat1.label">Tonnes/an granite — KEDA</div>
+        </div>
+        <div class="reveal" data-delay="0.18">
+          <div class="font-serif font-bold text-white" style="font-size:2.2rem;line-height:1" data-i18n="hero.stat2.num">5</div>
+          <div class="text-xs mt-1 tracking-wide" style="color:rgba(255,255,255,0.38)" data-i18n="hero.stat2.label">Branches d'activités</div>
+        </div>
+        <div class="reveal" data-delay="0.26">
+          <div class="font-serif font-bold text-white" style="font-size:2.2rem;line-height:1" data-i18n="hero.stat3.num">6</div>
+          <div class="text-xs mt-1 tracking-wide" style="color:rgba(255,255,255,0.38)" data-i18n="hero.stat3.label">Partenariats internationaux</div>
+        </div>
+        <div class="reveal" data-delay="0.34">
+          <div class="font-serif font-bold" style="font-size:2.2rem;line-height:1;color:#FF6B00" data-i18n="hero.stat4.num">NURA</div>
+          <div class="text-xs mt-1 tracking-wide" style="color:rgba(255,255,255,0.38)" data-i18n="hero.stat4.label">1re franchise en Afrique de l'Ouest</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── Label slide bas-droite ── -->
+  <div class="hero-slide-label" id="hero-slide-label">
+    <div class="slide-num" id="hero-slide-num">01 / 02</div>
+    <div class="slide-name" id="hero-slide-name">Industries Extractives</div>
+  </div>
+
+  <!-- ── Indicateurs ── -->
+  <div class="hero-indicators" role="tablist" aria-label="Slides">
+    <button class="hero-dot active" data-slide="0" role="tab" aria-label="Slide 1" aria-selected="true"></button>
+    <button class="hero-dot" data-slide="1" role="tab" aria-label="Slide 2" aria-selected="false"></button>
+  </div>
+
+  <!-- ── Progression ── -->
+  <div class="hero-progress-wrap" aria-hidden="true">
+    <div class="hero-progress-bar" id="hero-progress"></div>
+  </div>
+
+  <!-- ── Scroll hint ── -->
+  <div class="hero-scroll-hint" aria-hidden="true">
+    <div class="hero-scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+
+</section>
+
+<!-- ===== SECTION 2 : INTRODUCTION ===== -->
+<section class="bg-white py-24">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <div class="reveal">
+      <div class="badge-gsp"><span class="badge-dot"></span><span data-i18n="group.badge">Notre Groupe</span></div>
+      <h2 class="font-serif font-bold text-[#111111] text-3xl md:text-4xl mb-6" style="color:#111111" data-i18n="group.title">Une plateforme industrielle articulée<br/>autour de cinq branches</h2>
+      <div class="gold-divider mx-auto mb-8"></div>
+    </div>
+    <div class="text-left max-w-3xl mx-auto space-y-5">
+      <p class="reveal text-[#4b5563] leading-relaxed" style="font-size:1.025rem" data-delay="0.08" data-i18n="group.p1">
+        General Service Petroleum (GSP) est un groupe industriel sénégalais fondé en 2021, opérant dans les industries extractives, la distribution d'hydrocarbures, l'économie circulaire, la santé numérique et la logistique. Ancré au Sénégal, le Groupe déploie progressivement une plateforme industrielle intégrée à vocation régionale, articulée autour de cinq branches complémentaires.
+      </p>
+      <p class="reveal text-[#4b5563] leading-relaxed" style="font-size:1.025rem" data-delay="0.16" data-i18n="group.p2">
+        Nos partenariats avec KEDA Industrial Group (Chine), Fujifilm DKH LLP (Japon), Nordic Eco Innovation (Finlande) et Comtech Group (Royaume-Uni) témoignent de notre approche : mobiliser des expertises internationales de premier plan au service d'une ambition industrielle enracinée en Afrique de l'Ouest.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 3 : CINQ BRANCHES ===== -->
+<section class="py-24" style="background:#FAFAFA">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-14 reveal">
+      <div class="badge-gsp"><span class="badge-dot"></span><span data-i18n="act.badge">Nos Activités</span></div>
+      <h2 class="font-serif font-bold text-3xl md:text-4xl mt-1" style="color:#111111" data-i18n="act.title">Cinq branches d'activités complémentaires</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Industries Extractives -->
+      <div class="bg-white rounded-xl p-8 border border-transparent hover:border-[#FF6B00] transition-all duration-300 shadow-sm hover:shadow-lg reveal cursor-pointer group" data-delay="0.05"
+        style="--gold:#FF6B00" onmouseover="this.style.borderColor='#FF6B00'" onmouseout="this.style.borderColor='transparent'">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform" style="background:rgba(255,107,0,0.08)">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FF6B00" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/><line x1="12" y1="17" x2="12" y2="3"/>
+          </svg>
+        </div>
+        <h3 class="font-serif font-bold text-lg mb-2" style="color:#111111" data-i18n="act.a1.h">Industries Extractives</h3>
+        <div class="gold-divider"></div>
+        <p class="text-sm text-[#6B6B6B] leading-relaxed mb-4" data-i18n="act.a1.p">Exploitation de matériaux extractifs (granite, kaolin, argile) destinés aux industries de la céramique et du ciment, depuis nos sites au Sénégal.</p>
+        <a href="activites.html#extractive" class="inline-flex items-center gap-1.5 text-xs font-semibold" style="color:#FF6B00;text-decoration:none"><span data-i18n="act.more">En savoir plus</span> <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <!-- Hydrocarbures -->
+      <div class="bg-white rounded-xl p-8 border border-transparent hover:border-[#FF6B00] transition-all duration-300 shadow-sm hover:shadow-lg reveal" data-delay="0.1"
+        onmouseover="this.style.borderColor='#FF6B00'" onmouseout="this.style.borderColor='transparent'">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background:rgba(255,107,0,0.08)">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FF6B00" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2a8 8 0 018 8c0 5.5-8 13-8 13S4 15.5 4 10a8 8 0 018-8z"/><circle cx="12" cy="10" r="3"/>
+          </svg>
+        </div>
+        <h3 class="font-serif font-bold text-lg mb-2" style="color:#111111" data-i18n="act.a2.h">Distribution d'Hydrocarbures</h3>
+        <div class="gold-divider"></div>
+        <p class="text-sm text-[#6B6B6B] leading-relaxed mb-4" data-i18n="act.a2.p">Distribution de produits pétroliers liquides sous licence officielle (arrêté ministériel n° 001481 du 19 janvier 2023), avec un réseau de stations-service en déploiement.</p>
+        <a href="activites.html#hydrocarbures" class="inline-flex items-center gap-1.5 text-xs font-semibold" style="color:#FF6B00;text-decoration:none"><span data-i18n="act.more">En savoir plus</span> <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <!-- Santé Numérique -->
+      <div class="bg-white rounded-xl p-8 border border-transparent hover:border-[#FF6B00] transition-all duration-300 shadow-sm hover:shadow-lg reveal" data-delay="0.15"
+        onmouseover="this.style.borderColor='#FF6B00'" onmouseout="this.style.borderColor='transparent'">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background:rgba(255,107,0,0.08)">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FF6B00" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+          </svg>
+        </div>
+        <h3 class="font-serif font-bold text-lg mb-2" style="color:#111111" data-i18n="act.a3.h">Santé Numérique</h3>
+        <div class="gold-divider"></div>
+        <p class="text-sm text-[#6B6B6B] leading-relaxed mb-4" data-i18n="act.a3.p">Déploiement du premier réseau de centres de dépistage médical assisté par IA en Afrique de l'Ouest, en partenariat avec Fujifilm via la franchise NURA.</p>
+        <a href="activites.html#sante" class="inline-flex items-center gap-1.5 text-xs font-semibold" style="color:#FF6B00;text-decoration:none"><span data-i18n="act.more">En savoir plus</span> <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <!-- Économie Circulaire -->
+      <div class="bg-white rounded-xl p-8 border border-transparent hover:border-[#FF6B00] transition-all duration-300 shadow-sm hover:shadow-lg reveal" data-delay="0.05"
+        onmouseover="this.style.borderColor='#FF6B00'" onmouseout="this.style.borderColor='transparent'">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background:rgba(255,107,0,0.08)">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FF6B00" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.66 0 3-4.03 3-9s-1.34-9-3-9m0 18c-1.66 0-3-4.03-3-9s1.34-9 3-9"/>
+          </svg>
+        </div>
+        <h3 class="font-serif font-bold text-lg mb-2" style="color:#111111" data-i18n="act.a4.h">Économie Circulaire</h3>
+        <div class="gold-divider"></div>
+        <p class="text-sm text-[#6B6B6B] leading-relaxed mb-4" data-i18n="act.a4.p">Production de bio-méthanol, biogaz, biofertilisants et valorisation des déchets plastiques en matériaux composites, dans un partenariat triangulaire Sénégal-Finlande-UE.</p>
+        <a href="activites.html#circulaire" class="inline-flex items-center gap-1.5 text-xs font-semibold" style="color:#FF6B00;text-decoration:none"><span data-i18n="act.more">En savoir plus</span> <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <!-- Logistique -->
+      <div class="bg-white rounded-xl p-8 border border-transparent hover:border-[#FF6B00] transition-all duration-300 shadow-sm hover:shadow-lg reveal" data-delay="0.1"
+        onmouseover="this.style.borderColor='#FF6B00'" onmouseout="this.style.borderColor='transparent'">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background:rgba(255,107,0,0.08)">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FF6B00" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+          </svg>
+        </div>
+        <h3 class="font-serif font-bold text-lg mb-2" style="color:#111111" data-i18n="act.a5.h">Logistique Industrielle</h3>
+        <div class="gold-divider"></div>
+        <p class="text-sm text-[#6B6B6B] leading-relaxed mb-4" data-i18n="act.a5.p">Transport de matériaux extractifs entre nos sites de production et les industries clientes. Une flotte dédiée, en cours de constitution sous crédit-bail institutionnel, garantit la maîtrise opérationnelle de nos engagements contractuels.</p>
+        <a href="activites.html#logistique" class="inline-flex items-center gap-1.5 text-xs font-semibold" style="color:#FF6B00;text-decoration:none"><span data-i18n="act.more">En savoir plus</span> <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <!-- KWM promo card -->
+      <div class="rounded-xl p-8 reveal" data-delay="0.15" style="background:linear-gradient(135deg,#0A0A0A,#111111)">
+        <div class="text-xs font-bold tracking-[0.14em] uppercase mb-3" style="color:#FF6B00" data-i18n="act.kwm.tag">Expansion régionale</div>
+        <h3 class="font-serif font-bold text-white text-lg mb-3">Kairos West Mining</h3>
+        <p class="text-sm text-white/55 leading-relaxed mb-5" data-i18n="act.kwm.p">Kairos West Mining est la société d'expansion du Groupe GSP dans la sous-région ouest-africaine, dédiée aux activités minières. Elle est actuellement en cours de constitution.</p>
+        <a href="activites.html#kwm" class="inline-flex items-center gap-1.5 text-xs font-semibold" style="color:#FFD4A8;text-decoration:none"><span data-i18n="act.more">En savoir plus</span> <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 4 : PARTENARIATS ===== -->
+<section class="bg-white py-24">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-12 reveal">
+      <div class="badge-gsp"><span class="badge-dot"></span><span data-i18n="part.badge">Notre Réseau</span></div>
+      <h2 class="font-serif font-bold text-3xl md:text-4xl mt-1 mb-4" style="color:#111111" data-i18n="part.title">Des partenariats structurés sur quatre continents</h2>
+      <p class="text-[#6B6B6B] max-w-2xl mx-auto leading-relaxed" data-i18n="part.sub">
+        Le Groupe GSP s'appuie sur six partenariats internationaux, sélectionnés pour la profondeur de leur expertise, leur capacité à accélérer notre développement et leur complémentarité avec notre modèle industriel.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-10">
+      <div class="partner-logo-placeholder reveal" data-delay="0">KEDA Industrial Group</div>
+      <div class="partner-logo-placeholder reveal" data-delay="0.06">Fujifilm DKH LLP</div>
+      <div class="partner-logo-placeholder reveal" data-delay="0.12">Nordic Eco Innovation</div>
+      <div class="partner-logo-placeholder reveal" data-delay="0.18">Union Européenne</div>
+      <div class="partner-logo-placeholder reveal" data-delay="0.24">Comtech Group</div>
+      <div class="partner-logo-placeholder reveal" data-delay="0.30">Partenaire Ind. Indien</div>
+    </div>
+
+    <div class="text-center reveal" data-delay="0.15">
+      <a href="partenariats.html" class="inline-flex items-center gap-2 font-semibold text-sm" style="color:#FF6B00;text-decoration:none">
+        Découvrir nos partenariats →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 5 : LICENCES & CERTIFICATIONS ===== -->
+<section class="py-24" style="background:#111111">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-14 reveal">
+      <div class="badge-gsp" style="color:#FFD4A8;border-color:rgba(232,217,184,0.3);background:rgba(232,217,184,0.07)"><span style="background:#FFD4A8" class="badge-dot"></span><span data-i18n="comp.badge">Réglementation & Gouvernance</span></div>
+      <h2 class="font-serif font-bold text-white text-3xl md:text-4xl mt-2" data-i18n="comp.title">Un opérateur structuré et conforme</h2>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="reveal" data-delay="0">
+        <div class="flex items-center gap-3 mb-3">
+          <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background:rgba(255,107,0,0.15)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF6B00" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+          </div>
+          <h3 class="font-semibold text-white text-sm" data-i18n="comp.c1.h">Licence hydrocarbures</h3>
+        </div>
+        <p class="text-sm text-white/50 leading-relaxed" data-i18n="comp.c1.p">Arrêté ministériel n° 001481 du 19 janvier 2023, accordée pour 10 ans renouvelables par le Ministère du Pétrole et des Énergies.</p>
+      </div>
+
+      <div class="reveal" data-delay="0.08">
+        <div class="flex items-center gap-3 mb-3">
+          <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background:rgba(255,107,0,0.15)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF6B00" stroke-width="2"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          </div>
+          <h3 class="font-semibold text-white text-sm" data-i18n="comp.c2.h">Conformité OHADA</h3>
+        </div>
+        <p class="text-sm text-white/50 leading-relaxed" data-i18n="comp.c2.p">Société constituée et opérée selon les standards de l'Organisation pour l'Harmonisation en Afrique du Droit des Affaires.</p>
+      </div>
+
+      <div class="reveal" data-delay="0.16">
+        <div class="flex items-center gap-3 mb-3">
+          <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background:rgba(255,107,0,0.15)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF6B00" stroke-width="2"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3 class="font-semibold text-white text-sm" data-i18n="comp.c3.h">Standards SYSCOHADA</h3>
+        </div>
+        <p class="text-sm text-white/50 leading-relaxed" data-i18n="comp.c3.p">États financiers annuels établis selon le référentiel SYSCOHADA et certifiés par un cabinet d'expertise comptable agréé.</p>
+      </div>
+
+      <div class="reveal" data-delay="0.24">
+        <div class="flex items-center gap-3 mb-3">
+          <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background:rgba(255,107,0,0.15)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF6B00" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          </div>
+          <h3 class="font-semibold text-white text-sm" data-i18n="comp.c4.h">Visée ISCC EU</h3>
+        </div>
+        <p class="text-sm text-white/50 leading-relaxed" data-i18n="comp.c4.p">Alignement de notre projet bio-méthanol sur les standards internationaux ISCC EU de décarbonation pour l'industrie et le transport maritime.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 6 : CHIFFRES CLÉS ===== -->
+<section class="bg-white py-24">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-14 reveal">
+      <div class="badge-gsp"><span class="badge-dot"></span><span data-i18n="stats.badge">Perspectives</span></div>
+      <h2 class="font-serif font-bold text-3xl md:text-4xl mt-1" style="color:#111111" data-i18n="stats.title">Une dynamique en construction</h2>
+    </div>
+
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="text-center p-6 reveal" data-delay="0">
+        <div class="font-serif font-bold mb-1" style="font-size:3rem;color:#FF6B00;line-height:1">
+          <span data-target="120000">120 000</span>
+        </div>
+        <div class="font-semibold text-sm mb-2" style="color:#111111">tonnes/an</div>
+        <p class="text-xs text-[#6B6B6B] leading-relaxed">Contrat-cadre KEDA Ceramics signé en mars 2026 pour la fourniture de granite SF18B.</p>
+      </div>
+
+      <div class="text-center p-6 reveal" data-delay="0.08">
+        <div class="font-serif font-bold mb-1" style="font-size:3rem;color:#FF6B00;line-height:1">5</div>
+        <div class="font-semibold text-sm mb-2" style="color:#111111">branches d'activités</div>
+        <p class="text-xs text-[#6B6B6B] leading-relaxed">Cinq métiers industriels complémentaires, un modèle intégré.</p>
+      </div>
+
+      <div class="text-center p-6 reveal" data-delay="0.16">
+        <div class="font-serif font-bold mb-1" style="font-size:3rem;color:#FF6B00;line-height:1">6</div>
+        <div class="font-semibold text-sm mb-2" style="color:#111111">partenariats internationaux</div>
+        <p class="text-xs text-[#6B6B6B] leading-relaxed">Un réseau institutionnel construit sur quatre continents.</p>
+      </div>
+
+      <div class="text-center p-6 reveal" data-delay="0.24">
+        <div class="font-serif font-bold mb-1" style="font-size:3rem;color:#FF6B00;line-height:1">1<sup style="font-size:1.6rem">re</sup></div>
+        <div class="font-semibold text-sm mb-2" style="color:#111111">franchise NURA en Afrique de l'Ouest</div>
+        <p class="text-xs text-[#6B6B6B] leading-relaxed">Avec Fujifilm DKH LLP, première implantation de la plateforme NURA en zone CEDEAO.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 7 : CTA FINAL ===== -->
+<section class="py-24" style="background:#FF6B00">
+  <div class="max-w-3xl mx-auto px-6 text-center reveal">
+    <h2 class="font-serif font-bold text-3xl md:text-4xl mb-4" style="color:#111111" data-i18n="cta.title">Construisons ensemble</h2>
+    <p class="mb-10 leading-relaxed" style="color:#111111;opacity:0.8" data-i18n="cta.sub">
+      Partenaires, investisseurs, institutions : nous sommes à votre disposition pour un premier échange.
+    </p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="contact.html" class="inline-flex items-center gap-2 font-semibold text-sm px-8 py-3.5 rounded" style="background:#111111;color:white;text-decoration:none"
+        onmouseover="this.style.background='#0A0A0A'" onmouseout="this.style.background='#111111'"><span data-i18n="cta.btn1">Nous contacter</span></a>
+      <a href="equipe.html" class="inline-flex items-center gap-2 font-semibold text-sm px-8 py-3.5 rounded border-2" style="border-color:#111111;color:#111111;text-decoration:none;background:transparent"
+        onmouseover="this.style.background='rgba(17,17,17,0.08)'" onmouseout="this.style.background='transparent'"><span data-i18n="cta.btn2">Découvrir notre équipe</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer style="background:#0A0A0A">
+  <div class="max-w-6xl mx-auto px-6 pt-16 pb-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+      <!-- Brand -->
+      <div>
+        <a href="index.html" class="flex items-center gap-3 mb-4" style="text-decoration:none">
+          <picture>
+            <source srcset="images/logo-gsp-white.png" type="image/png">
+            <img src="images/logo-gsp-white.png" alt="GSP" style="height:46px;width:auto;display:block"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          </picture>
+          <div class="items-center gap-2" style="display:none">
+            <div style="width:40px;height:40px;background:rgba(255,255,255,0.1);border-radius:6px;display:flex;align-items:center;justify-content:center;font-weight:900;font-style:italic;color:white;font-size:16px;font-family:'Arial Black',Arial,sans-serif">GP</div>
+            <div>
+              <div style="font-weight:800;font-size:11px;color:white;font-family:'Arial Black',Arial,sans-serif;letter-spacing:0.05em;line-height:1.3">GENERAL SERVICES</div>
+              <div style="font-weight:800;font-size:11px;color:#FF6B00;font-family:'Arial Black',Arial,sans-serif;letter-spacing:0.05em;line-height:1.3">PETROLEUM</div>
+            </div>
+          </div>
+        </a>
+        <p class="text-sm text-white/50 leading-relaxed mb-3">General Service Petroleum</p>
+        <p class="text-sm text-white/40 leading-relaxed">Cité Ataya, Immeuble 6 Apt 673<br/>Nord Foire, Dakar — Sénégal</p>
+      </div>
+
+      <!-- Navigation -->
+      <div>
+        <h4 class="text-xs font-bold tracking-[0.14em] uppercase mb-5" style="color:#FF6B00" data-i18n="footer.nav">Navigation</h4>
+        <ul class="space-y-3">
+          <li><a href="index.html" class="text-sm text-white/50 hover:text-white transition-colors" style="text-decoration:none">Accueil</a></li>
+          <li><a href="activites.html" class="text-sm text-white/50 hover:text-white transition-colors" style="text-decoration:none">Activités</a></li>
+          <li><a href="partenariats.html" class="text-sm text-white/50 hover:text-white transition-colors" style="text-decoration:none">Partenariats</a></li>
+          <li><a href="equipe.html" class="text-sm text-white/50 hover:text-white transition-colors" style="text-decoration:none">Équipe</a></li>
+          <li><a href="contact.html" class="text-sm text-white/50 hover:text-white transition-colors" style="text-decoration:none">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h4 class="text-xs font-bold tracking-[0.14em] uppercase mb-5" style="color:#FF6B00" data-i18n="footer.contact">Contact</h4>
+        <div class="space-y-3">
+          <div class="flex gap-2.5 items-center">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF6B00" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:contact@gspetroleum.sn" class="text-sm text-white/50 hover:text-white transition-colors" style="text-decoration:none">contact@gspetroleum.sn</a>
+          </div>
+          <div class="flex gap-2.5 items-start">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF6B00" stroke-width="2" style="margin-top:3px;flex-shrink:0"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.03 1.18 2 2 0 012 .03h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+            <div>
+              <a href="tel:+221777528181" class="text-sm text-white/50 hover:text-white transition-colors block" style="text-decoration:none">+221 77 752 81 81</a>
+              <a href="tel:+221338434399" class="text-sm text-white/50 hover:text-white transition-colors block mt-0.5" style="text-decoration:none">+221 33 843 43 99 <span style="opacity:0.5;font-size:0.7rem">(fixe)</span></a>
+            </div>
+          </div>
+          <div class="flex gap-2.5 items-center">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF6B00" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+            <span class="text-sm text-white/50">gspetroleum.sn</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sub-footer -->
+    <div class="pt-6 text-center" style="border-top:1px solid rgba(255,107,0,0.2)">
+      <p class="text-xs text-white/30 mb-1">© <span class="footer-year"></span> General Service Petroleum. <span data-i18n="footer.rights">Tous droits réservés.</span></p>
+      <p class="text-xs text-white/20">RCCM SN DKR 2021 B 3476 &nbsp;|&nbsp; NINEA 008344210 2Y2</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

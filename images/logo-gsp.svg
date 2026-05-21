@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 220" width="560" height="220">
+
+  <!-- ═══════════════════════════════════════════
+       GP MONOGRAM — bold italic black
+  ═══════════════════════════════════════════ -->
+  <text x="65" y="128"
+        font-family="'Arial Black','Franklin Gothic Heavy','Impact',sans-serif"
+        font-size="120" font-weight="900" font-style="italic"
+        fill="#111111">GP</text>
+
+  <!-- ═══════════════════════════════════════════
+       GOUTTE D'HUILE — dans le creux du G
+  ═══════════════════════════════════════════ -->
+  <!-- Forme de goutte : pointe en haut, arrondie en bas -->
+  <path d="M133 52 Q143 40 143 62 Q143 80 133 86 Q123 80 123 62 Q123 40 133 52Z"
+        fill="#111111" opacity="0.85"/>
+  <path d="M133 56 Q139 46 139 63 Q139 77 133 82 Q127 77 127 63 Q127 46 133 56Z"
+        fill="white"/>
+  <!-- Reflet orange de la goutte -->
+  <path d="M133 48 Q141 38 141 60 Q141 78 133 85 Q125 78 125 60 Q125 38 133 48Z"
+        fill="none" stroke="#FF6B00" stroke-width="2.5"/>
+
+  <!-- ═══════════════════════════════════════════
+       NOZZLE / PISTOLET — au-dessus du G
+  ═══════════════════════════════════════════ -->
+  <g transform="translate(116, 0)">
+    <!-- Flexible / tuyau arrondi gauche -->
+    <path d="M2 32 Q-4 22 0 12 Q4 2 14 4 Q20 5 20 12"
+          stroke="#111111" stroke-width="6" fill="none"
+          stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Corps poignée -->
+    <rect x="14" y="8" width="8" height="26" rx="3" fill="#111111"
+          transform="rotate(12 18 21)"/>
+    <!-- Déclencheur -->
+    <path d="M16 26 L12 34 L18 34 L20 26Z" fill="#111111"
+          transform="rotate(12 16 30)"/>
+    <!-- Canon / bec du pistolet -->
+    <path d="M19 8 L38 -2 L41 4 L23 14Z" fill="#111111"/>
+    <!-- Embout bec -->
+    <path d="M38 -2 L44 -4 L46 2 L41 4Z" fill="#111111"/>
+  </g>
+
+  <!-- ═══════════════════════════════════════════
+       SWOOSH — arc orange caractéristique
+  ═══════════════════════════════════════════ -->
+  <!-- Arc principal -->
+  <path d="M72 124 Q100 152 160 158 Q210 162 255 148 Q285 138 305 124"
+        stroke="#FF6B00" stroke-width="13" fill="none"
+        stroke-linecap="round"/>
+  <!-- Pointe de fin de swoosh (vers la droite) -->
+  <path d="M298 127 Q312 119 318 112 Q312 122 305 124Z"
+        fill="#FF6B00"/>
+
+  <!-- ═══════════════════════════════════════════
+       TAGLINE — GENERAL SERVICES PETROLEUM
+  ═══════════════════════════════════════════ -->
+  <text x="280" y="178"
+        font-family="'Arial Black','Franklin Gothic Heavy','Impact',sans-serif"
+        font-size="27" font-weight="900" font-style="italic"
+        fill="#111111" text-anchor="middle" letter-spacing="2">GENERAL SERVICES</text>
+
+  <text x="280" y="208"
+        font-family="'Arial Black','Franklin Gothic Heavy','Impact',sans-serif"
+        font-size="27" font-weight="900" font-style="italic"
+        fill="#FF6B00" text-anchor="middle" letter-spacing="2">PETROLEUM</text>
+
+</svg>

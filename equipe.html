@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Équipe — GSP General Service Petroleum</title>
+  <meta name="description" content="L'équipe dirigeante du Groupe GSP : Papa Baba Guissé (Co-fondateur & Managing Partner) et Maïssa Mbaye Sall (Co-fondateur & Gérant statutaire). Une direction engagée sur le long terme."/>
+  <!-- Détection langue AVANT rendu CSS -->
+  <script>(function(){var s=localStorage.getItem('gsp-lang');document.documentElement.lang=s&&['fr','en'].includes(s)?s:(navigator.language||'').toLowerCase().startsWith('en')?'en':'fr';})()</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400;1,700&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{navy:'#111111','dark-navy':'#0A0A0A',gold:'#FF6B00','light-gold':'#FFD4A8',muted:'#6B6B6B'},fontFamily:{serif:['"Playfair Display"','serif'],sans:['Inter','sans-serif']}}}}</script>
+  <link rel="stylesheet" href="css/custom.css"/>
+  <!-- Schema.org Person -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context":"https://schema.org",
+      "@type":"Person",
+      "name":"Maïssa Mbaye Sall",
+      "jobTitle":"Co-fondateur & Gérant statutaire",
+      "worksFor":{"@type":"Organization","name":"General Service Petroleum","url":"https://gspetroleum.sn"},
+      "url":"https://gspetroleum.sn/equipe.html"
+    },
+    {
+      "@context":"https://schema.org",
+      "@type":"Person",
+      "name":"Papa Baba Guissé",
+      "jobTitle":"Co-fondateur & Managing Partner",
+      "worksFor":{"@type":"Organization","name":"General Service Petroleum","url":"https://gspetroleum.sn"},
+      "url":"https://gspetroleum.sn/equipe.html"
+    },
+    {
+      "@context":"https://schema.org",
+      "@type":"Person",
+      "name":"Momar Aly Ndiaye",
+      "jobTitle":"Senior Partner — Affaires Institutionnelles & Marchés Publics",
+      "description":"Ancien Secrétaire Général Adjoint du Gouvernement du Sénégal",
+      "worksFor":{"@type":"Organization","name":"General Service Petroleum","url":"https://gspetroleum.sn"},
+      "url":"https://gspetroleum.sn/equipe.html"
+    }
+  ]
+  </script>
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png"/>
+  <link rel="icon" type="image/png" sizes="192x192" href="images/favicons/favicon-192x192.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png"/>
+  <meta name="theme-color" content="#0A0A0A"/>
+</head>
+<body class="bg-white text-[#3A3A3A] font-sans">
+
+<div id="menu-overlay" class="mobile-menu-overlay"></div>
+<nav id="mobile-menu" class="mobile-menu">
+  <div class="flex justify-between items-center mb-8">
+    <span class="text-white font-bold text-sm tracking-widest uppercase">Menu</span>
+    <button id="menu-close" class="text-white p-1" aria-label="Fermer">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <a href="index.html" class="nav-link" data-i18n="nav.home">Accueil</a>
+  <a href="activites.html" class="nav-link" data-i18n="nav.activities">Activités</a>
+  <a href="partenariats.html" class="nav-link" data-i18n="nav.partners">Partenariats</a>
+  <a href="equipe.html" class="nav-link active" data-i18n="nav.team">Équipe</a>
+  <a href="contact.html" class="nav-link" data-i18n="nav.contact">Contact</a>
+  <a href="contact.html" class="mt-6 block text-center font-semibold text-sm px-5 py-2.5 rounded" style="color:white;background:#FF6B00" data-i18n="nav.cta">Nous contacter</a>
+</nav>
+
+<header id="site-header" class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100 transition-shadow duration-300">
+  <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+    <a href="index.html" class="flex items-center" style="text-decoration:none">
+      <picture>
+        <source srcset="images/logo-gsp.webp" type="image/webp">
+        <img src="images/logo-gsp.png" alt="General Service Petroleum"
+             style="height:48px;width:auto;display:block"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+      </picture>
+      <!-- Fallback text logo -->
+      <div class="items-center gap-2.5" style="display:none">
+        <div style="width:44px;height:44px;background:#111;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:900;font-style:italic;color:white;font-size:18px;font-family:'Arial Black',Arial,sans-serif;letter-spacing:-1px">GP</div>
+        <div>
+          <div style="font-weight:800;font-size:11px;color:#111;font-family:'Arial Black',Arial,sans-serif;letter-spacing:0.05em;line-height:1.2">GENERAL SERVICE</div>
+          <div style="font-weight:800;font-size:11px;color:#FF6B00;font-family:'Arial Black',Arial,sans-serif;letter-spacing:0.05em;line-height:1.2">PETROLEUM</div>
+        </div>
+      </div>
+    </a>
+    <nav class="desktop-nav flex items-center gap-1">
+      <a href="index.html" class="nav-link px-4 py-2 text-sm font-medium text-[#3A3A3A] rounded transition-colors" data-i18n="nav.home">Accueil</a>
+      <a href="activites.html" class="nav-link px-4 py-2 text-sm font-medium text-[#3A3A3A] rounded transition-colors" data-i18n="nav.activities">Activités</a>
+      <a href="partenariats.html" class="nav-link px-4 py-2 text-sm font-medium text-[#3A3A3A] rounded transition-colors" data-i18n="nav.partners">Partenariats</a>
+      <a href="equipe.html" class="nav-link px-4 py-2 text-sm font-medium rounded transition-colors" style="color:#FF6B00;border-bottom:2px solid #FF6B00" data-i18n="nav.team">Équipe</a>
+      <a href="contact.html" class="nav-link px-4 py-2 text-sm font-medium text-[#3A3A3A] rounded transition-colors" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <!-- Lang switcher -->
+      <div class="lang-switcher" style="margin-right:0.5rem">
+        <button class="lang-btn" data-lang="fr" aria-label="Français">FR</button>
+        <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+      </div>
+      <a href="contact.html" class="header-cta hidden md:inline-flex text-sm font-semibold px-4 py-2.5 rounded" style="background:#FF6B00;color:white;text-decoration:none" data-i18n="nav.cta">Nous contacter</a>
+      <button id="hamburger" class="hamburger-btn flex flex-col gap-1.5 p-2"><span class="block w-6 h-0.5 bg-[#3A3A3A]"></span><span class="block w-6 h-0.5 bg-[#3A3A3A]"></span><span class="block w-6 h-0.5 bg-[#3A3A3A]"></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- PAGE BANNER -->
+<section class="pt-20 relative overflow-hidden" style="background:#0A0A0A;min-height:220px;display:flex;align-items:flex-end">
+  <div class="absolute inset-0 bg-grid-pattern"></div>
+  <div class="relative max-w-6xl mx-auto px-6 pb-10 w-full">
+    <div class="text-xs text-white/40 mb-3 flex items-center gap-2"><a href="index.html" class="text-white/40" style="text-decoration:none">Accueil</a> <span>›</span> <span style="color:#FF6B00">Équipe</span></div>
+    <h1 class="font-serif font-bold text-white mb-2" style="font-size:clamp(1.8rem,4vw,3rem)" data-i18n="equipe.page.h1">Notre Équipe</h1>
+    <p class="text-sm" style="color:#FF6B00" data-i18n="team.banner.sub">Une direction associée engagée sur le long terme</p>
+  </div>
+</section>
+
+<main>
+
+<!-- INTRO -->
+<section class="bg-white py-16">
+  <div class="max-w-3xl mx-auto px-6 text-center reveal">
+    <div class="badge-gsp"><span class="badge-dot"></span><span data-i18n="team.badge">Direction Associée</span></div>
+    <h2 class="font-serif font-bold text-3xl mt-1 mb-6" style="color:#111111" data-i18n="team.subtitle">Une gouvernance resserrée et complémentaire</h2>
+    <p class="text-[#6B6B6B] leading-relaxed" data-i18n="team.intro">
+      Le Groupe GSP est piloté par une direction associée structurée autour de profils complémentaires, réunissant expertise opérationnelle, vision stratégique et accès institutionnel.
+    </p>
+  </div>
+</section>
+
+<!-- ÉQUIPE DIRIGEANTE — 3-card grid -->
+<section class="py-16" style="background:#FAFAFA">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-14 reveal">
+      <div class="badge-gsp"><span class="badge-dot"></span><span data-i18n="team.badge">Direction Associée</span></div>
+      <h2 class="font-serif font-bold text-3xl mt-1" style="color:#111111" data-i18n="team.title">Notre Équipe Dirigeante</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+
+      <!-- Card 1 : Maïssa Mbaye Sall -->
+      <div class="team-card reveal" data-delay="0">
+        <!-- Monogram -->
+        <div style="width:64px;height:64px;border-radius:50%;background:rgba(255,107,0,0.1);border:2px solid rgba(255,107,0,0.25);display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem">
+          <span class="font-serif font-bold text-xl" style="color:#FF6B00">MMS</span>
+        </div>
+        <!-- Badge role -->
+        <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#FF6B00;margin-bottom:0.4rem"><span class="lang-fr">Co-Fondateur</span><span class="lang-en">Co-Founder</span></div>
+        <!-- Name -->
+        <h3 class="font-serif font-bold text-xl mb-1" style="color:#111111">Maïssa Mbaye Sall</h3>
+        <!-- Title -->
+        <p class="text-sm italic mb-5 lang-fr" style="color:#6B6B6B">Co-fondateur &amp; Gérant statutaire — GSP Group</p>
+        <p class="text-sm italic mb-5 lang-en" style="color:#6B6B6B">Co-Founder &amp; Statutory Manager — GSP Group</p>
+        <!-- Divider -->
+        <div class="gold-divider mb-5"></div>
+        <!-- Bio -->
+        <p class="text-sm text-[#4b5563] leading-relaxed mb-6 lang-fr">
+          Co-fondateur et Gérant statutaire du Groupe GSP, en charge du pilotage opérationnel, de la conformité juridique et administrative, et du déploiement des activités industrielles sur les sites de production au Sénégal.
+        </p>
+        <p class="text-sm text-[#4b5563] leading-relaxed mb-6 lang-en">
+          Co-Founder and Statutory Manager of GSP Group, responsible for operational oversight, legal and administrative compliance, and the deployment of industrial activities at our production sites in Senegal.
+        </p>
+        <!-- Key domains -->
+        <ul class="space-y-2 mt-auto lang-fr">
+          <li class="text-sm text-[#4b5563] flex items-start gap-2"><span class="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style="background:#FF6B00"></span>Pilotage opérationnel des activités extractives</li>
+          <li class="text-sm text-[#4b5563] flex items-start gap-2"><span class="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style="background:#FF6B00"></span>Conformité juridique &amp; administrative</li>
+          <li class="text-sm text-[#4b5563] flex items-start gap-2"><span class="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style="background:#FF6B00"></span>Supervision des sites de Saraya &amp; Dialacoto</li>
+        </ul>
+        <ul class="space-y-2 mt-auto lang-en">
+          <li class="text-sm text-[#4b5563] flex items-start gap-2"><span class="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style="background:#FF6B00"></span>Operational oversight of extractive activities</li>
+          <li class="text-sm text-[#4b5563] flex items-start gap-2"><span class="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style="background:#FF6B00"></span>Legal &amp; administrative compliance</li>
+          <li class="text-sm text-[#4b5563] flex items-start gap-2"><span class="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style="background:#FF6B00"></span>Supervision of Saraya &amp; Dialacoto sites</li>
+        </ul>
+      </div>
+
+      <!-- Card 2 : Papa Baba Guissé -->
+      <div class="team-card reveal" data-delay="0.1">
+        <div style="width:64px;height:64px;border-radius:50%;background:rgba(255,107,0,0.1);border:2px solid rgba(255,107,0,0.25);display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem">
+          <span class="font-serif font-bold text-xl" style="color:#FF6B00">PBG</span>
+        </div>
+        <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#FF6B00;margin-bottom:0.4rem"><span class="lang-fr">Co-Fondateur</span><span class="lang-en">Co-Founder</span></div>
+        <h3 class="font-serif font-bold text-xl mb-1" style="color:#111111">Papa Baba Guissé</h3>
+        <p class="text-sm italic mb-5 lang-fr" style="color:#6B6B6B">Co-fondateur &amp; Managing Partner — GSP Group</p>
+        <p class="text-sm italic mb-5 lang-en" style="color:#6B6B6B">Co-Founder &amp; Managing Partner — GSP Group</p>
+        <div class="gold-divider mb-5"></div>
+        <p class="text-sm text-[#4b5563] leading-relaxed mb-6 lang-fr">
+          Co-fondateur et Managing Partner en charge du développement stratégique, des partenariats internationaux et de la structuration financière. Président Fondateur de Preventis Health Africa SAS et pilote stratégique de Kairos West Mining (KWM).
+        </p>
+        <p class="text-sm text-[#4b5563] leading-relaxed mb-6 lang-en">
+          Co-Founder and Managing Partner responsible for strategic development, international partnerships and financial structuring. Founding President of Preventis Health Africa SAS and strategic lead of Kairos West Mining (KWM).
+        </p>
+        <ul class="space-y-2 mt-auto lang-fr">
+          <li class="text-sm text-[#4b5563] flex items-start gap-2"><span class="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style="background:#FF6B00"></span>Développement stratégique &amp; partenariats internationaux</li>
+          <li class="text-sm text-[#4b5563] flex items-start gap-2"><span class="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style="background:#FF6B00"></span>Structuration financière &amp; levées de fonds</li>
+          <li class="text-sm text-[#4b5563] flex items-start gap-2"><span class="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style="background:#FF6B00"></span>Présidence — Preventis Health Africa SAS</li>
+        </ul>
+        <ul class="space-y-2 mt-auto lang-en">
+          <li class="text-sm text-[#4b5563] flex items-start gap-2"><span class="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style="background:#FF6B00"></span>Strategic development &amp; international partnerships</li>
+          <li class="text-sm text-[#4b5563] flex items-start gap-2"><span class="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style="background:#FF6B00"></span>Financial structuring &amp; fundraising</li>
+          <li class="text-sm text-[#4b5563] flex items-start gap-2"><span class="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style="background:#FF6B00"></span>Chairmanship — Preventis Health Africa SAS</li>
+        </ul>
+      </div>
+
+      <!-- Card 3 : Momar Aly Ndiaye -->
+      <div class="team-card reveal" data-delay="0.2">
+        <div style="width:64px;height:64px;border-radius:50%;background:rgba(255,107,0,0.1);border:2px solid rgba(255,107,0,0.25);display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem">
+          <span class="font-serif font-bold text-xl" style="color:#FF6B00">MAN</span>
+        </div>
+        <div style="font-size:0.65rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:#FF6B00;margin-bottom:0.4rem">Senior Partner</div>
+        <h3 class="font-serif font-bold text-xl mb-1" style="color:#111111">Momar Aly Ndiaye</h3>
+        <p class="text-sm italic mb-5 lang-fr" style="color:#6B6B6B">Senior Partner — Affaires Institutionnelles &amp; Marchés Publics</p>
+        <p class="text-sm italic mb-5 lang-en" style="color:#6B6B6B">Senior Partner — Institutional Affairs &amp; Public Procurement</p>
+        <div class="gold-divider mb-5"></div>
+        <p class="text-sm text-[#4b5563] leading-relaxed mb-6 lang-fr">
+          Ancien Secrétaire Général Adjoint du Gouvernement du Sénégal. Expert reconnu en affaires institutionnelles, marchés publics et environnement réglementaire, apportant au Groupe GSP un accès stratégique aux institutions publiques et une maîtrise des cadres légaux nationaux et régionaux.
+        </p>
+        <p class="text-sm text-[#4b5563] leading-relaxed mb-6 lang-en">
+          Former Deputy Secretary-General of the Senegalese Government. Recognised expert in institutional affairs, public procurement and regulatory environment, bringing GSP Group strategic access to public institutions and deep knowledge of national and regional legal frameworks.
+        </p>
+        <ul class="space-y-2 mt-auto lang-fr">
+          <li class="text-sm text-[#4b5563] flex items-start gap-2"><span class="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style="background:#FF6B00"></span>Relations institutionnelles &amp; gouvernementales</li>
+          <li class="text-sm text-[#4b5563] flex items-start gap-2"><span class="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style="background:#FF6B00"></span>Marchés publics &amp; environnement réglementaire</li>
+          <li class="text-sm text-[#4b5563] flex items-start gap-2"><span class="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style="background:#FF6B00"></span>Ancien Secrétaire Général Adjoint du Gouvernement</li>
+        </ul>
+        <ul class="space-y-2 mt-auto lang-en">
+          <li class="text-sm text-[#4b5563] flex items-start gap-2"><span class="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style="background:#FF6B00"></span>Institutional &amp; governmental relations</li>
+          <li class="text-sm text-[#4b5563] flex items-start gap-2"><span class="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style="background:#FF6B00"></span>Public procurement &amp; regulatory environment</li>
+          <li class="text-sm text-[#4b5563] flex items-start gap-2"><span class="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style="background:#FF6B00"></span>Former Deputy Secretary-General of the Government</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- GOUVERNANCE -->
+<section class="bg-white py-20">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-14 reveal">
+      <div class="badge-gsp"><span class="badge-dot"></span><span class="lang-fr">Gouvernance</span><span class="lang-en">Governance</span></div>
+      <h2 class="font-serif font-bold text-3xl mt-1 mb-4" style="color:#111111" data-i18n="team.gov.h2">Une gouvernance en cours de consolidation</h2>
+      <p class="text-[#6B6B6B] max-w-2xl mx-auto leading-relaxed lang-fr">
+        Le Groupe GSP renforce progressivement la gouvernance de ses filiales. CITABEL dispose d'un Comité de Surveillance présidé par Papa Baba Guissé. Preventis Health Africa SAS met en place une gouvernance corporate adaptée aux exigences d'un tour Series A international. Kairos West Mining est en cours de constitution dans la sous-région ouest-africaine, avec une gouvernance alignée sur les standards OHADA.
+      </p>
+      <p class="text-[#6B6B6B] max-w-2xl mx-auto leading-relaxed lang-en">
+        GSP Group is progressively strengthening the governance of its subsidiaries. CITABEL has a Supervisory Committee chaired by Papa Baba Guissé. Preventis Health Africa SAS is putting in place corporate governance adapted to the requirements of an international Series A round. Kairos West Mining is being incorporated in the West African sub-region, with governance aligned to OHADA standards.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="rounded-xl p-8 border border-[#FFD4A8] reveal" data-delay="0" style="background:#FAFAFA">
+        <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style="background:rgba(255,107,0,0.1)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF6B00" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <h3 class="font-serif font-bold text-lg mb-3" style="color:#111111">CITABEL</h3>
+        <p class="text-sm text-[#6B6B6B] leading-relaxed lang-fr">Comité de Surveillance opérationnel, présidé par Papa Baba Guissé. Réunions trimestrielles avec ordre du jour structuré.</p>
+        <p class="text-sm text-[#6B6B6B] leading-relaxed lang-en">Operational Supervisory Committee, chaired by Papa Baba Guissé. Quarterly meetings with structured agenda.</p>
+      </div>
+
+      <div class="rounded-xl p-8 border border-[#FFD4A8] reveal" data-delay="0.1" style="background:#FAFAFA">
+        <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style="background:rgba(255,107,0,0.1)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF6B00" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+        </div>
+        <h3 class="font-serif font-bold text-lg mb-3" style="color:#111111">Preventis Health Africa</h3>
+        <p class="text-sm text-[#6B6B6B] leading-relaxed lang-fr">Gouvernance corporate en structuration dans le cadre du tour Series A. Board à venir, comités spécialisés, pacte d'actionnariat.</p>
+        <p class="text-sm text-[#6B6B6B] leading-relaxed lang-en">Corporate governance being structured in the context of the Series A round. Board to come, specialised committees, shareholders' agreement.</p>
+      </div>
+
+      <div class="rounded-xl p-8 border border-[#FFD4A8] reveal" data-delay="0.2" style="background:#FAFAFA">
+        <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style="background:rgba(255,107,0,0.1)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF6B00" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+        </div>
+        <h3 class="font-serif font-bold text-lg mb-3" style="color:#111111">Kairos West Mining</h3>
+        <p class="text-sm text-[#6B6B6B] leading-relaxed lang-fr">Société en cours de constitution dans un pays de la sous-région ouest-africaine. Gouvernance OHADA. Conseil d'administration prévu.</p>
+        <p class="text-sm text-[#6B6B6B] leading-relaxed lang-en">Company being incorporated in a country in the West African sub-region. OHADA governance. Board of directors planned.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTENAIRES CONSEILS -->
+<section class="py-20" style="background:#0A0A0A">
+  <div class="max-w-3xl mx-auto px-6 text-center reveal">
+    <div class="badge-gsp" style="color:#FFD4A8;border-color:rgba(232,217,184,0.3);background:rgba(232,217,184,0.07);display:inline-flex;margin-bottom:1rem"><span style="background:#FFD4A8" class="badge-dot"></span><span class="lang-fr">Partenaires Conseils</span><span class="lang-en">Advisory Partners</span></div>
+    <h2 class="font-serif font-bold text-white mb-6" style="font-size:clamp(1.6rem,3vw,2.2rem)" data-i18n="team.conseils.h2">Des conseils experts à chaque étape</h2>
+    <p class="text-white/60 leading-relaxed lang-fr">
+      Le Groupe GSP s'appuie sur un réseau de conseils spécialisés : cabinet d'expertise comptable agréé pour les états financiers SYSCOHADA, cabinet juridique pour la conformité OHADA et la rédaction contractuelle, banque d'affaires internationale (Comtech Group, Londres) pour la levée de capitaux, et conseillers techniques sectoriels sur chacune de nos branches d'activité.
+    </p>
+    <p class="text-white/60 leading-relaxed lang-en">
+      GSP Group relies on a network of specialist advisors: an accredited accounting firm for SYSCOHADA financial statements, a law firm for OHADA compliance and contractual drafting, an international investment bank (Comtech Group, London) for capital raising, and technical sector advisors across each of our business branches.
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer style="background:#0A0A0A;border-top:1px solid rgba(255,107,0,0.15)">
+  <div class="max-w-6xl mx-auto px-6 pt-16 pb-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+      <div>
+        <a href="index.html" class="flex items-center gap-3 mb-4" style="text-decoration:none">
+          <picture>
+            <source srcset="images/logo-gsp.webp" type="image/webp">
+            <img src="images/logo-gsp-white.png" alt="General Service Petroleum"
+                 style="height:40px;width:auto;display:block"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+          </picture>
+          <div style="display:none;align-items:center;gap:8px">
+            <div style="width:38px;height:38px;background:rgba(255,255,255,0.1);border-radius:6px;display:flex;align-items:center;justify-content:center;font-weight:900;font-style:italic;color:white;font-size:15px;font-family:'Arial Black',Arial,sans-serif">GP</div>
+            <div>
+              <div style="font-weight:800;font-size:10px;color:white;font-family:'Arial Black',Arial,sans-serif">GENERAL SERVICE</div>
+              <div style="font-weight:800;font-size:10px;color:#FF6B00;font-family:'Arial Black',Arial,sans-serif">PETROLEUM</div>
+            </div>
+          </div>
+        </a>
+        <p class="text-sm text-white/40 leading-relaxed">General Service Petroleum<br/>Cité Ataya, Immeuble 6 Apt 673<br/>Nord Foire, Dakar — Sénégal</p>
+      </div>
+      <div>
+        <h4 class="text-xs font-bold tracking-[0.14em] uppercase mb-5" style="color:#FF6B00" data-i18n="footer.nav">Navigation</h4>
+        <ul class="space-y-3">
+          <li><a href="index.html" class="text-sm text-white/50 hover:text-white" style="text-decoration:none" data-i18n="nav.home">Accueil</a></li>
+          <li><a href="activites.html" class="text-sm text-white/50 hover:text-white" style="text-decoration:none" data-i18n="nav.activities">Activités</a></li>
+          <li><a href="partenariats.html" class="text-sm text-white/50 hover:text-white" style="text-decoration:none" data-i18n="nav.partners">Partenariats</a></li>
+          <li><a href="equipe.html" class="text-sm text-white/70 hover:text-white" style="text-decoration:none" data-i18n="nav.team">Équipe</a></li>
+          <li><a href="contact.html" class="text-sm text-white/50 hover:text-white" style="text-decoration:none" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-xs font-bold tracking-[0.14em] uppercase mb-5" style="color:#FF6B00" data-i18n="footer.contact">Contact</h4>
+        <div class="space-y-3">
+          <a href="mailto:contact@gspetroleum.sn" class="flex gap-2.5 items-center text-sm text-white/50 hover:text-white" style="text-decoration:none"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF6B00" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>contact@gspetroleum.sn</a>
+          <a href="tel:+221777528181" class="flex gap-2.5 items-center text-sm text-white/50 hover:text-white" style="text-decoration:none"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FF6B00" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.03 1.18 2 2 0 012 .03h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>+221 77 752 81 81</a>
+        </div>
+      </div>
+    </div>
+    <div class="pt-6 text-center" style="border-top:1px solid rgba(255,107,0,0.2)">
+      <p class="text-xs text-white/30 mb-1">© <span class="footer-year"></span> General Service Petroleum. <span data-i18n="footer.rights">Tous droits réservés.</span></p>
+      <p class="text-xs text-white/20">RCCM SN DKR 2021 B 3476 &nbsp;|&nbsp; NINEA 008344210 2Y2</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
